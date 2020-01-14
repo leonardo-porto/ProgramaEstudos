@@ -4,6 +4,267 @@
     margin-top: 0;
 }
 
+#play {
+    width: 25px;
+    position: absolute;
+    left: 85px;
+    top: 20px;
+    
+    
+    
+}
+
+#pause {
+
+    width: 25px;
+    position: absolute;
+    left: 85px;
+    top: 20px;
+    display: none;
+
+
+}
+
+#mais {
+
+    width: 25px;
+    position: absolute;
+    left: 140px;
+    top: 20px;
+
+
+
+}
+
+#menos {
+
+    width: 25px;
+    position: absolute;
+    left: 40px;
+    top: 20px;
+
+
+
+}
+
+#camada1 {
+
+    background-color: rgb(70, 65, 64);
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    position: absolute;
+    top: 450px;
+    left: 700px;
+}
+
+
+
+#click {
+
+    margin-top: 50px;
+}
+
+#andamento {
+
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    left: 78px;
+    top: 5px;
+}
+
+#base{
+
+    position: absolute;
+    top: 450px;
+    left: 650px;
+    display: none;
+
+}
+
+
+
+#menuH{
+
+    background-color: orangered;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    position: absolute;
+    right: -20px;
+    top: 5px;
+    cursor: pointer;
+    
+
+}
+
+#menuH1{
+
+    
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    position: absolute;
+    right: -20px;
+    top: 5px;
+    cursor: pointer;
+    z-index: 10;
+    
+
+}
+
+
+
+#h1::first-letter{
+
+    font-size: 40px;
+    
+
+
+}
+
+
+
+.linha{
+
+    width: 20px;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    right: -8px;
+}
+
+#linha1{
+
+    top: 15px;
+}
+
+#linha2{
+
+    top: 23px;
+}
+
+#linha3{
+
+    top: 31px;
+}
+
+
+
+#timerSvg{
+
+    width: 50px;
+    position: absolute;
+    top: 400px;
+    left: 600px;
+    cursor: pointer;   
+    
+}
+
+#aviso{
+
+    background-color: rgb(31, 29, 29);
+    color: orangered;
+    font-size: 20px;
+    width: 400px;
+    height: 100px;
+    border-radius: 10px;
+    position: absolute;
+    top: 300px;
+    left: 600px;
+    z-index: 10;
+    display: none;
+    transition: all 2s;
+}
+
+
+
+@keyframes timer{
+
+    0%{
+
+        width: 0;
+        background-color: greenyellow;
+    }
+
+    50%{
+
+        background-color: orangered;
+    }
+
+   
+
+    100%{
+
+        width: 600px;
+        background-color: red;
+    }
+
+
+}
+
+#timer{
+
+    
+    background-color: red;
+    width: 600px;
+    height: 30px;
+    border-radius: 10px;
+    position: absolute;
+    top: 410px;
+    left: 650px;
+    
+    
+}
+
+#barra{
+
+    
+    background-image: linear-gradient(to top, rgb(119, 118, 118), rgb(218, 216, 216), black, rgb(161, 153, 153));
+    width: 600px;
+    height: 30px;
+    border-radius: 10px;
+    position: absolute;
+    top: 410px;
+    left: 650px;
+    box-shadow: black inset 0 2px;
+    
+    
+}
+
+@keyframes pisca {
+
+    50%{
+
+        background-color:   rgb(51, 49, 49);
+    }
+}
+
+@keyframes pisca2 {
+
+    50%{
+
+        background-color:   rgb(6, 234, 241);
+    }
+}
+
+#ex1 {
+
+    background-color:  rgb(51, 49, 49);
+}
+
+.nota{
+
+    background-image: linear-gradient(45deg, greenyellow, rgb(146, 201, 63) , rgb(161, 201, 102), rgb(136, 197, 45) );
+}
+
+.nota:hover{
+
+    background-image: linear-gradient(-45deg, blue, rgb(143, 143, 243), rgb(71, 71, 243), blue);
+}
 
 
 h1{
@@ -12,7 +273,48 @@ h1{
     text-align: center;
     font-size: 30px;
     margin-top: 10px;
-    transition: all 2s;
+    
+    text-shadow: black 1px 1px;
+    color: orangered;
+    
+    
+}
+
+@keyframes setas {
+
+    50%{
+
+        transform: scale(1.3);
+        opacity: 0.5;
+    }
+}
+
+.setas{
+
+            
+    color: orangered;
+    font-size: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    animation: setas 1s linear infinite;
+    cursor: pointer;
+   
+
+}
+
+#esquerda{
+
+    position: absolute;
+    top: 20px;
+    left: 550px;
+    text-shadow: 3px 2px 3px black;
+}
+
+#direita{
+
+    position: absolute;
+    top: 20px;
+    left: 800px;
+    text-shadow: 3px 2px 3px black;
 }
 
 
@@ -29,12 +331,15 @@ h1{
     font-weight: bold;
 }
 
+
+
 #video {
 
     position: absolute;
-    top: 1150px;
+    top: 580px;
     right: -25px;
     border-radius: 10px;
+    display: none;
 }
 
 h2{
@@ -81,8 +386,8 @@ h2{
     top: 10px;
     left: 400px;
     font-weight: bold;
-    color: whitesmoke;   
-    background-color: rgb(112, 112, 112);   
+    color: rgb(250, 95, 6);   
+    background-color: rgb(43, 42, 42);   
     height: 39px;
     width: 160px;
     padding-top: 10px;
@@ -90,35 +395,8 @@ h2{
    
 }
 
-.quadro{
 
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding-bottom: 0;
-    color: whitesmoke;
-}
 
-.quadro:hover{
-
-    color: yellow;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-#quadroEscalas {
-
-    background-color: rgb(48, 55, 56);
-    height: 300px;
-    width: 220px;
-    position: absolute;
-    top: 58px;
-    left: 800px;
-    font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    z-index: 2;
-    display: none;
-    
-}
 
 #pestana {
 
@@ -129,37 +407,8 @@ h2{
     position: absolute;
     top: 95px;
     display: none;
-}
+}    
 
-#quadroArpejos {
-
-    background-color: rgb(48, 55, 56);
-    height: 300px;
-    width: 200px;
-    position: absolute;
-    top: 58px;
-    left: 600px;
-    font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    z-index: 2;
-    display: none;
-    
-    
-}
-
-#quadroAcordes {
-
-    background-color: rgb(48, 55, 56);
-    height: 300px;
-    width: 200px;
-    position: absolute;
-    top: 58px;
-    left: 400px;
-    font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    z-index: 2;
-    display: none;    
-}
 
 #acordes:hover{
 
@@ -220,13 +469,15 @@ body{
 
 #corda1 {
     
-    left: 50px;
+    left: 120px;
     border-radius: 5px;
-    background-color:  rgb(87, 84, 84);
+    background-image: linear-gradient(to top, rgb(119, 118, 118), rgb(218, 216, 216), black, rgb(161, 153, 153));   
     height: 3px;
     width: 1200px;
     position: absolute;
     top: 100px;
+    
+    
     
           
 
@@ -235,76 +486,87 @@ body{
 #corda1:hover{
 
     background-color:yellow;
+    animation: pisca 0.5s linear infinite;
+    
 }
 #corda6:hover{
 
     background-color:yellow;
+    animation: pisca 0.5s linear infinite;
 }
 #corda2:hover{
 
     background-color:rgb(139, 14, 133);
+    animation: pisca 0.5s linear infinite;
 }
 #corda3:hover{
 
     background-color:rgb(0, 225, 255);
+    animation: pisca 0.5s linear infinite;
 }
 #corda4:hover{
 
     background-color:rgb(255, 174, 0);
+    animation: pisca 0.5s linear infinite;
 }
 #corda5:hover{
 
     background-color:rgb(11, 24, 204);
+    animation: pisca 0.5s linear infinite;
 }
 
 
 
 #corda2 {
     
-    left: 50px;
+    left: 120px;
     border-radius: 5px;
-    background-color:  rgb(87, 84, 84);
+    background-image: linear-gradient(to top, rgb(119, 118, 118), rgb(218, 216, 216), black, rgb(161, 153, 153));
+    
     height: 4px;
     width: 1200px;
     position: absolute;
-    top: 150px   
-
+    top: 150px;   
+    
 }
 
 #corda3 {
     
-    left: 50px;
+    left: 120px;
     border-radius: 5px;
-    background-color:  rgb(87, 84, 84);
+    background-image: linear-gradient(to top, rgb(119, 118, 118), rgb(218, 216, 216), black, rgb(161, 153, 153));
+    
     height: 5px;
     width: 1200px;
     position: absolute;
-    top: 200px   
-
+    top: 200px;
+    
 }
 
 #corda4 {
     
-    left: 50px;
+    left: 120px;
     border-radius: 5px;
-    background-color:  rgb(87, 84, 84);
+    background-image: linear-gradient(to top, rgb(119, 118, 118), rgb(218, 216, 216), black, rgb(161, 153, 153));
+    
     height: 6px;
     width: 1200px;
     position: absolute;
-    top: 250px   
-
+    top: 250px;
+    
 }
 
 #corda5 {
     
-    left: 50px;
+    left: 120px;
     border-radius: 5px;
-    background-color:  rgb(87, 84, 84);
+    background-image: linear-gradient(to top, rgb(119, 118, 118), rgb(218, 216, 216), black, rgb(161, 153, 153));
+    
     height: 7px;
     width: 1200px;
     position: absolute;
-    top: 300px   
-
+    top: 300px;
+    
 }
 
 #fret{
@@ -320,30 +582,34 @@ body{
 
 #corda6 {
     
-    left: 50px;
+    left: 120px;
     border-radius: 5px;
-    background-color: rgb(87, 84, 84);
+    background-image: linear-gradient(to top, rgb(119, 118, 118), rgb(218, 216, 216), black, rgb(161, 153, 153));   
     height: 8px;
     width: 1200px;
     position: absolute;
-    top: 350px   
-
+    top: 350px;
+    
 }
 
 #traste1 {
 
-    background-color: gray;
+    
     height: 250px;
     transition: all 2s;
     width: 3px;
     position: absolute;
     top: 100px;
+    background-color: rgb(214, 214, 12);
+    
+    
+    
 
 }
 
 #traste2 {
 
-    background-color: gray;
+    background-color: rgb(214, 214, 12);   
     height: 250px;
     transition: all 2s;
     width: 3px;
@@ -355,7 +621,7 @@ body{
 
 #traste3 {
 
-    background-color: gray;
+    background-color: rgb(214, 214, 12);    
     height: 250px;
     transition: all 2s;
     width: 3px;
@@ -369,7 +635,7 @@ body{
 
 #traste4 {
 
-    background-color: gray;
+    background-color: rgb(214, 214, 12);    
     height: 250px;
     transition: all 2s;
     width: 3px;
@@ -381,7 +647,7 @@ body{
 
 #traste5 {
 
-    background-color: gray;
+    background-color: rgb(214, 214, 12);   
     height: 250px;
     transition: all 2s;
     width: 3px;
@@ -393,7 +659,7 @@ body{
 
 #traste6 {
 
-    background-color: gray;
+    background-color: rgb(214, 214, 12);    
     height: 250px;
     transition: all 2s;
     width: 3px;
@@ -405,7 +671,7 @@ body{
 
 #traste7 {
 
-    background-color: gray;
+    background-color: rgb(214, 214, 12);    
     height: 250px;
     transition: all 2s;
     width: 3px;
@@ -417,7 +683,7 @@ body{
 
 #traste8 {
 
-    background-color: gray;
+    background-color: rgb(214, 214, 12);    
     height: 250px;
     transition: all 2s;
     width: 3px;
@@ -429,8 +695,9 @@ body{
 
 #traste9 {
 
-    background-color: gray;
+    background-color: rgb(214, 214, 12);  
     height: 250px;
+    animation: gira 6s linear;
     width: 3px;
     transition: all 2s;
     position: absolute;
@@ -441,7 +708,8 @@ body{
 
 #traste10 {
 
-    background-color: gray;
+    background-color: rgb(214, 214, 12);   
+    animation: gira 6s linear;
     height: 250px;
     width: 3px;
     position: absolute;
@@ -453,8 +721,9 @@ body{
 
 #traste11 {
 
-    background-color: gray;
+    background-color: rgb(214, 214, 12);   
     height: 250px;
+    animation: gira 6s linear;
     width: 3px;
     transition: all 2s;
     position: absolute;
@@ -465,7 +734,8 @@ body{
 
 #traste12 {
 
-    background-color: gray;
+    background-color: rgb(214, 214, 12);   
+    animation: gira 6s linear;
     height: 250px;
     transition: all 2s;
     width: 3px;
@@ -477,7 +747,8 @@ body{
 
 #traste13 {
 
-    background-color: gray;
+    background-color: rgb(214, 214, 12);  
+    animation: gira 6s linear;
     height: 250px;
     transition: all 2s;
     width: 3px;
@@ -489,9 +760,10 @@ body{
 
 #traste14 {
 
-    background-color: gray;
+    background-color: rgb(214, 214, 12);  
     height: 250px;
     transition: all 2s;
+    animation: gira 6s linear;
     width: 3px;
     position: absolute;
     top: 100px;
@@ -501,9 +773,10 @@ body{
 
 #traste15 {
 
-    background-color: gray;
+    background-color: rgb(214, 214, 12);   
     height: 250px;
     width: 3px;
+    animation: gira 6s linear;
     transition: all 2s;
     position: absolute;
     top: 100px;
@@ -1877,7 +2150,11 @@ body{
 
 #limpar {
 
-    background-color: rgb(27, 200, 223);
+    border-top: orangered 2px solid;
+    border-left: orangered 2px solid;
+    border-bottom: orangered 2px solid;
+    background-color: rgb(39, 37, 37);
+    color: orangered;
     height: 50px;
     width: 100px;
     font-size: 30px;
@@ -1885,25 +2162,24 @@ body{
     position: absolute;
     top: 400px;
     transition: all 1s;
-}
-
-#limpar:hover {
-
     cursor: pointer;
-    background-color: rgb(17, 140, 156);
-    font-weight: bold;
-    color: white;
 }
+
+
 
 #mostrar {
 
-    background-color: yellowgreen;
+    border-top: orangered 2px solid;
+    border-right: orangered 2px solid;
+    border-bottom: orangered 2px solid;
+    background-color: rgb(39, 37, 37);
+    color: orangered;
     height: 50px;
     width: 200px;
     font-size: 30px;
     padding: 10px;
     transition: all 1s;
-    
+    cursor: pointer;
     position: absolute;
     top: 400px;
     left: 200px;
@@ -1912,14 +2188,7 @@ body{
 
 }
 
-#mostrar:hover {
 
-    cursor: pointer;
-    font-weight: bold;
-    color: white;
-    background-color: rgb(109, 145, 38);
-}
-}
 
 #input {
 
@@ -1989,6 +2258,47 @@ body{
     cursor: pointer;
 }
 
+#limpar:hover{
+
+    background-color: orangered;
+    color: black;
+}
+
+#mostrar:hover{
+
+    background-color: orangered;
+    color: black;
+}
+
+#tipo:hover{
+
+    background-color: orangered;
+    color: black;
+}
+
+#tonalidade:hover{
+
+    background-color: orangered;
+    color: black;
+}
+
+#posicao:hover{
+
+    background-color: orangered;
+    color: black;
+}
+
+#estrutura:hover{
+
+    background-color: orangered;
+    color: black;
+}
+
+
+
+
+
+
 
 
 
@@ -2002,8 +2312,12 @@ body{
     position: absolute;
     top: 509px;
     left: 980px;
-    background-color:rgb(65, 65, 102);
-    color: wheat;
+    border-top: orangered 2px solid;
+    border-left: orangered 2px solid;
+    border-right: orangered 2px solid;
+    border-bottom: orangered 2px solid;
+    background-color: rgb(39, 37, 37);
+    color: orangered;
     font-weight: bold;
     
 }
@@ -2082,122 +2396,124 @@ body{
 
 #tonalidade {
 
-    background-color: rgb(44, 155, 230);
+    
     position: absolute;
     top: 510px;
     left: 700px;
     height: 50px;
     font-size: 20px;
     font-weight: bold;
-    color: white;
+    cursor: pointer;
     font-family: Arial, Helvetica, sans-serif;
     transition: all 1s;
+    border-top: orangered 2px solid;
+    border-bottom: orangered 2px solid;
+    background-color: rgb(39, 37, 37);
+    color: orangered;
     
 }
 
-#tonalidade:hover {
 
-    background-color: rgb(31, 109, 161);
-    color: black;
-
-
-}
 
 #estrutura {
 
-    background-color: purple;
+    
     position: absolute;
     top: 510px;
     left: 400px;
     height: 50px;
     font-size: 20px;
+    cursor: pointer;
     font-weight: bold;
-    color: white;
     font-family: Arial, Helvetica, sans-serif;
     transition: all 2s;
+    border-left: orangered 2px solid;
+    border-top: orangered 2px solid;
+    border-bottom: orangered 2px solid;
+    background-color: rgb(39, 37, 37);
+    color: orangered;
     
 }
 
-#estrutura:hover{
 
-    font-weight: bold;
-    color: white;
-    background-color: rgb(83, 1, 83);
-    color: grey;
-
-
-
-}
 
 #posicao {
 
-    background-color: royalblue;
+    
     position: absolute;
+    cursor: pointer;
     top: 510px;
-    left: 828px;
+    left: 824px;
     height: 50px;
     font-size: 20px;
     font-weight: bold;
-    color: white;
     font-family: Arial, Helvetica, sans-serif;
     transition: all 1s;
+    border-right: orangered 2px solid;
+    border-left:  rgb(39, 37, 37) 2px solid;
+    border-top: orangered 2px solid;
+    border-bottom: orangered 2px solid;
+    background-color: rgb(39, 37, 37);
+    color: orangered;
     
 }
 
-#posicao:hover{
 
-    background-color: rgb(38, 65, 146);
-    color: grey;
-
-
-}
 
 #tipo {
 
-    background-color: gray;
+    
     position: absolute;
+    cursor: pointer;
     top: 510px;
     left: 510px;
     height: 50px;
     font-size: 20px;
     font-weight: bold;
-    color: white;
     font-family: Arial, Helvetica, sans-serif;
     transition: all 1s;
+    border-right:  rgb(39, 37, 37) 2px solid;
+    border-left:  rgb(39, 37, 37) 2px solid;
+    border-top: orangered 2px solid;
+    border-bottom: orangered 2px solid;
+    background-color: rgb(39, 37, 37);
+    color: orangered;
     
 }
 
-#tipo:hover{
 
-    background-color: rgb(77, 75, 75);
-    color: black;
-    
-}
-
-option:hover{
-
-    background-color: white;
-    color:  rgb(44, 155, 230);
-
-
-}
 
 #listaEx {
 
     position: absolute;
     top: 630px;
     right: 100px;
+    display: none;
 }
 
 #lista {
 
     position: absolute;
-    top: 700px;
-    right: 10px;
-    background-color: rgb(51, 49, 49);
+    top: 3px;
+    right: -550px;
+    background-image: linear-gradient(to top, rgb(39, 38, 38), rgb(99, 97, 97), rgb(70, 68, 68), rgb(20, 20, 20));
     border-radius: 10px;
-    width: 500px;
-    
+    width: 500px;       
+    margin-right: 0;
+    transition: all 2s;
+    z-index: 50;
+    box-shadow: -15px 10px 4px rgba(0, 0, 0, 0.637);
+}
+
+@keyframes aparecer{
+
+    0%{
+
+        top: -500px;
+    }
+
+
+
 }
 
 #moldura {
@@ -2207,11 +2523,14 @@ option:hover{
     height: 300px;
     width: 380px;
     position: absolute;
+    background-color: rgba(50, 55, 56, 0.315);
     top: 80px;
-    z-index: 5;
+    z-index: -5;
     left: 100px;
     display: none;
     transition: all 2s;
+    box-shadow: 10px 10px 5px black;
+    
     
 }
 
@@ -2241,14 +2560,25 @@ option:hover{
 
     background-color: orangered;
     cursor: pointer;
-   
+    animation: pisca 0.5s linear infinite;
+      
     
     
 }
+
+
+#lista li:active{
+
+    
+    animation: pisca 0.5s linear infinite;  
+    
+    
+}
+
 #pdf{
 
     position: absolute;
-    top: 700px;
+    top: 580px;
     left: -10px;
 }
 
@@ -2257,9 +2587,10 @@ option:hover{
     position: absolute;
     top: 45px;
     color: white;
-    height: 40px;
+    height: 30px;
     border-radius: 5px;
     background-color: grey;
+    display: none;
 } 
 
 #posicao1 {

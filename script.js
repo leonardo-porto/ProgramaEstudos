@@ -1,3 +1,21 @@
+
+let traste1 = document.getElementById('traste1')
+let traste2 = document.getElementById('traste2')
+let traste3 = document.getElementById('traste3')
+let traste4 = document.getElementById('traste4')
+let traste5 = document.getElementById('traste5')
+let traste6 = document.getElementById('traste6')
+let traste7 = document.getElementById('traste7')
+let traste8 = document.getElementById('traste8')
+let traste9 = document.getElementById('traste9')
+let traste10 = document.getElementById('traste10')
+let traste11 = document.getElementById('traste11')
+let traste12 = document.getElementById('traste12')
+let traste13 = document.getElementById('traste13')
+let traste14 = document.getElementById('traste14')
+let traste15 = document.getElementById('traste15')
+let menuH = document.getElementById('menuH')
+let menuH1 = document.getElementById('menuH1')
 let estrutura = document.getElementById('estrutura')
 let tipo = document.getElementById('tipo')
 let tonalidade = document.getElementById('tonalidade')
@@ -11,48 +29,555 @@ let mostrar = document.getElementById('mostrar')
 let botao = document.getElementById('botao')
 let pestana = document.getElementById('pestana')
 let pdf = document.getElementById('pdf')
-
-
+let lista = document.getElementById('lista')
+let corda = document.getElementsByClassName('corda')
+let traste = document.getElementsByClassName('traste')
+let nota = document.getElementsByClassName('nota')
 let ex1 = document.getElementById('ex1')
 let ex2 = document.getElementById('ex2')
 let ex3 = document.getElementById('ex3')
 let ex4 = document.getElementById('ex4')
-
+let ex5 = document.getElementById('ex5')
 let moldura = document.getElementById('moldura')
 let posicao1 = document.getElementById('posicao1')
 let posicao2 = document.getElementById('posicao2')
 let posicao3 = document.getElementById('posicao3')
 let posicao4 = document.getElementById('posicao4')
 let posicao5 = document.getElementById('posicao5')
+let all = document.getElementsByTagName('*')
+let bolinha = document.getElementsByClassName('bolinha')
+let body = document.body
+let timerSvg = document.getElementById('timerSvg')
+let aviso = document.getElementById('aviso')
+let timer = document.getElementById('timer')
+let esquerda = document.getElementById('esquerda')
+let direita = document.getElementById('direita')
+let contadorPosicao = 1
+let base = document.getElementById('base')
+let click = document.getElementById('click')
+let play = document.getElementById('play')
+let pause = document.getElementById('pause')
+let mais = document.getElementById('mais')
+let menos = document.getElementById('menos')
+let andamento = document.getElementById('andamento')
+let bpm = 60
+let camada1 = document.getElementById('camada1')
+
+andamento.innerHTML = bpm + ' BPM'
+
+click.src = bpm + ' BPM.mp3'
+
+function verificaBpm() {
+
+    if(bpm <= 55){
+
+        bpm = 60
+        andamento.innerHTML = '60 BPM'
+        click.src = '60 BPM.mp3'
+        click.play()
+
+    }
+
+    if (bpm >= 285){
+
+        bpm = 280
+        andamento.innerHTML = '280 BPM'
+        click.src = '280 BPM.mp3'
+        click.play()
+
+    }
+    
+}
+
+play.onclick = function () {
+
+    click.play()
+    play.style.display = 'none'
+    pause.style.display = 'block'
+    click.currentTime = 10
+    camada1.style.animation = 'pisca2 1s linear infinite'
+    
+
+
+}
+
+pause.onclick = function () {
+
+    click.pause()
+    click.currentTime = 10
+    play.style.display = 'block'
+    pause.style.display = 'none'
+    camada1.style.animation = ''
+    
+
+    
+
+
+}
+
+mais.onclick = function () {
+
+    bpm += 5
+    andamento.innerHTML = bpm + ' BPM'
+    click.src = bpm + ' BPM.mp3'
+    click.currentTime = 10
+    click.play()
+    verificaBpm()
+    camada1.style.animation = 'pisca2 1s linear infinite'
+
+}
+
+menos.onclick = function () {
+
+    
+
+    bpm -= 5
+    andamento.innerHTML = bpm + ' BPM'
+    click.src = bpm + ' BPM.mp3'
+    click.currentTime = 10
+    click.play()
+    verificaBpm()
+    camada1.style.animation = 'pisca2 1s linear infinite'
+
+}
+
+
+ex5.onclick = function () {
+
+    console.log('ex5')
+    lista.style.right = '-550px'
+    base.style.display = 'block'
+    base.play()
+
+    setInterval(function () {
+
+        if (base.currentTime < 39) {
+
+            console.log('shape 1')
+
+            apagar()
+            corda6[3].style.display = 'block'
+            corda6[5].style.display = 'block'
+            corda6[7].style.display = 'block'
+            corda5[3].style.display = 'block'
+            corda5[5].style.display = 'block'
+            corda5[7].style.display = 'block'
+            corda4[4].style.display = 'block'
+            corda4[5].style.display = 'block'
+            corda4[7].style.display = 'block'
+            corda3[4].style.display = 'block'
+            corda3[5].style.display = 'block'
+            corda3[7].style.display = 'block'
+            corda2[5].style.display = 'block'
+            corda2[7].style.display = 'block'
+            corda2[8].style.display = 'block'
+            corda1[5].style.display = 'block'
+            corda1[7].style.display = 'block'
+            corda1[8].style.display = 'block'
+
+
+        } else if (base.currentTime < 78) {
+
+            console.log('shape 2')
+
+            apagar()
+            corda6[5].style.display = 'block'
+            corda6[7].style.display = 'block'
+            corda6[8].style.display = 'block'
+            corda5[5].style.display = 'block'
+            corda5[7].style.display = 'block'
+            corda5[9].style.display = 'block'
+            corda4[5].style.display = 'block'
+            corda4[7].style.display = 'block'
+            corda4[9].style.display = 'block'
+            corda3[5].style.display = 'block'
+            corda3[7].style.display = 'block'
+            corda3[9].style.display = 'block'
+            corda2[7].style.display = 'block'
+            corda2[8].style.display = 'block'
+            corda2[10].style.display = 'block'
+            corda1[7].style.display = 'block'
+            corda1[8].style.display = 'block'
+            corda1[10].style.display = 'block'
+
+
+        } else if (base.currentTime < 117) {
+
+            console.log('shape 3')
+
+            apagar()
+            corda6[7].style.display = 'block'
+            corda6[8].style.display = 'block'
+            corda6[10].style.display = 'block'
+            corda5[7].style.display = 'block'
+            corda5[9].style.display = 'block'
+            corda5[10].style.display = 'block'
+            corda4[7].style.display = 'block'
+            corda4[9].style.display = 'block'
+            corda4[10].style.display = 'block'
+            corda3[7].style.display = 'block'
+            corda3[9].style.display = 'block'
+            corda3[11].style.display = 'block'
+            corda2[8].style.display = 'block'
+            corda2[10].style.display = 'block'
+            corda2[12].style.display = 'block'
+            corda1[8].style.display = 'block'
+            corda1[10].style.display = 'block'
+            corda1[12].style.display = 'block'
+
+
+        } else if (base.currentTime < 156) {
+
+            console.log('shape 4')
+
+            apagar()
+            corda6[8].style.display = 'block'
+            corda6[10].style.display = 'block'
+            corda6[12].style.display = 'block'
+            corda5[9].style.display = 'block'
+            corda5[10].style.display = 'block'
+            corda5[12].style.display = 'block'
+            corda4[9].style.display = 'block'
+            corda4[10].style.display = 'block'
+            corda4[12].style.display = 'block'
+            corda3[9].style.display = 'block'
+            corda3[11].style.display = 'block'
+            corda3[12].style.display = 'block'
+            corda2[10].style.display = 'block'
+            corda2[12].style.display = 'block'
+            corda2[13].style.display = 'block'
+            corda1[10].style.display = 'block'
+            corda1[12].style.display = 'block'
+            corda1[14].style.display = 'block'
+
+
+        } else if (base.currentTime < 195) {
+
+            console.log('shape 5')
+
+            apagar()
+            corda6[10].style.display = 'block'
+            corda6[12].style.display = 'block'
+            corda6[14].style.display = 'block'
+            corda5[10].style.display = 'block'
+            corda5[12].style.display = 'block'
+            corda5[14].style.display = 'block'
+            corda4[10].style.display = 'block'
+            corda4[12].style.display = 'block'
+            corda4[14].style.display = 'block'
+            corda3[11].style.display = 'block'
+            corda3[12].style.display = 'block'
+            corda3[14].style.display = 'block'
+            corda2[12].style.display = 'block'
+            corda2[13].style.display = 'block'
+            corda2[15].style.display = 'block'
+            corda1[12].style.display = 'block'
+            corda1[14].style.display = 'block'
+            corda1[15].style.display = 'block'
+
+
+        } else if (base.currentTime < 234) {
+
+            console.log('shape 6')
+
+            apagar()
+            corda6[0].style.display = 'block'
+            corda6[2].style.display = 'block'
+            corda6[3].style.display = 'block'
+            corda5[0].style.display = 'block'
+            corda5[2].style.display = 'block'
+            corda5[3].style.display = 'block'
+            corda4[0].style.display = 'block'
+            corda4[2].style.display = 'block'
+            corda4[4].style.display = 'block'
+            corda3[0].style.display = 'block'
+            corda3[2].style.display = 'block'
+            corda3[4].style.display = 'block'
+            corda2[1].style.display = 'block'
+            corda2[3].style.display = 'block'
+            corda2[5].style.display = 'block'
+            corda1[2].style.display = 'block'
+            corda1[3].style.display = 'block'
+            corda1[5].style.display = 'block'
+
+
+        } else if (base.currentTime < 273) {
+
+            console.log('shape 7')
+
+            apagar()
+            corda6[2].style.display = 'block'
+            corda6[3].style.display = 'block'
+            corda6[5].style.display = 'block'
+            corda5[2].style.display = 'block'
+            corda5[3].style.display = 'block'
+            corda5[5].style.display = 'block'
+            corda4[2].style.display = 'block'
+            corda4[4].style.display = 'block'
+            corda4[5].style.display = 'block'
+            corda3[2].style.display = 'block'
+            corda3[4].style.display = 'block'
+            corda3[5].style.display = 'block'
+            corda2[3].style.display = 'block'
+            corda2[5].style.display = 'block'
+            corda2[7].style.display = 'block'
+            corda1[3].style.display = 'block'
+            corda1[5].style.display = 'block'
+            corda1[7].style.display = 'block'
+
+
+        } 
+
+
+    }, 500)
+
+}
+
+
+menuH1.onclick = function () {
+
+    lista.style.right = '10px'
+
+    for (i = 0; i < corda.length; i++) {
+
+        corda[i].style.filter = 'blur(5px)'
+
+
+    }
+
+
+    for (i = 0; i < bolinha.length; i++) {
+
+        bolinha[i].style.filter = 'blur(5px)'
+
+
+    }
+
+    for (i = 0; i < traste.length; i++) {
+
+        traste[i].style.filter = 'blur(5px)'
+
+
+    }
+
+    for (i = 0; i < nota.length; i++) {
+
+        nota[i].style.filter = 'blur(5px)'
+
+
+    }
+
+
+
+}
+
+if (lista.style.right == '-550px') {
+
+    for (i = 0; i < corda.length; i++) {
+
+        corda[i].style.filter = 'blur(0px)'
+
+
+    }
+
+    for (i = 0; i < traste.length; i++) {
+
+        traste[i].style.filter = 'blur(0px)'
+
+
+    }
+
+    for (i = 0; i < nota.length; i++) {
+
+        nota[i].style.filter = 'blur(0px)'
+
+
+    }
+
+
+
+}
+
+esquerda.onclick = function () {
+
+
+
+
+
+}
+
+direita.onclick = function () {
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+bolinha[1].onclick = function () {
+
+    for (i = 0; i < corda.length; i++) {
+
+        corda[i].style.backgroundColor = 'gray'
+
+
+    }
+
+    for (i = 0; i < traste.length; i++) {
+
+        traste[i].style.backgroundColor = 'gray'
+
+
+    }
+
+    for (i = 0; i < bolinha.length; i++) {
+
+        bolinha[i].style.backgroundColor = 'gray'
+
+
+    }
+
+    body.style.backgroundColor = 'white'
+
+}
+
+bolinha[0].onclick = function () {
+
+    for (i = 0; i < corda.length; i++) {
+
+        corda[i].style.backgroundColor = 'orangered'
+
+
+    }
+
+    for (i = 0; i < traste.length; i++) {
+
+        traste[i].style.backgroundColor = 'orangered'
+
+
+    }
+
+    for (i = 0; i < bolinha.length; i++) {
+
+        bolinha[i].style.backgroundColor = 'orangered'
+
+
+    }
+
+    body.style.backgroundColor = '#1F3340'
+
+}
+
+timerSvg.onmouseover = function () {
+
+
+    aviso.style.display = 'block'
+
+}
+
+timerSvg.onmouseout = function () {
+
+
+    aviso.style.display = 'none'
+
+}
+
+timerSvg.onclick = function () {
+
+
+    timer.style.animation = 'timer 600s linear'
+
+    setTimeout(function () {
+
+        aviso.style.display = 'block'
+        aviso.innerHTML = 'Já chegamos na metade! Força, falta pouco. Não deixe as distrações te pararem!!!'
+        aviso.style.animation = 'pisca 1s linear 5'
+
+    }, 1000 * 60 * 5)
+
+    setTimeout(function () {
+
+        alert('Exercício finalizado!!!')
+
+    }, 1000 * 60 * 10)
+
+    setTimeout(function () {
+
+        window.location.reload()
+
+    }, 1000 * 60 * 10 + 3) 
+
+}
+
+
+
+
+
+
+
+ex1.onclick = function () {
+
+    lista.style.right = '-550px'
+
+    ex1.style.backgroundColor = 'orange'
+}
+
+for (i = 0; i < bolinha.length; i++) {
+
+    bolinha[i].style.backgroundColor = 'grey'
+
+
+}
+
+console.log(all.length)
 
 posicao1.onclick = function () {
 
-    molduraF (8)
-    
+    molduraF(8)
+    moldura.style.animation = 'cresce 1s linear'
+
+
+
 }
 
 posicao2.onclick = function () {
 
-    molduraF (10)
-    
+    molduraF(10)
+    moldura.style.animation = 'cresce 1s linear'
+
+
+
 }
 
 posicao3.onclick = function () {
 
-    molduraF (0)
-    
+    molduraF(0)
+    moldura.style.animation = 'cresce 1s linear'
+
+
 }
 
 posicao4.onclick = function () {
 
-    molduraF (3)
-    
+    molduraF(3)
+    moldura.style.animation = 'cresce 1s linear'
+
+
 }
 
 posicao5.onclick = function () {
 
-    molduraF (5)
-    
+    molduraF(5)
+    moldura.style.animation = 'cresce 1s linear'
+
+
 }
 
 
@@ -61,58 +586,62 @@ function molduraF(casa) {
 
     moldura.style.display = 'block'
 
-    if(casa == 1){
+
+    if (casa == 1) {
 
         moldura.style.left = '100px'
 
-    } else if (casa == 0){
+
+    } else if (casa == 0) {
 
         moldura.style.left = '20px'
 
-    } else if (casa == 2){
+    } else if (casa == 2) {
 
         moldura.style.left = '180px'
-    } else if (casa == 3){
+    } else if (casa == 3) {
 
         moldura.style.left = '260px'
-    } else if (casa == 4){
+    } else if (casa == 4) {
 
         moldura.style.left = '340px'
-    } else if (casa == 5){
+    } else if (casa == 5) {
 
         moldura.style.left = '420px'
-    } else if (casa == 6){
+    } else if (casa == 6) {
 
         moldura.style.left = '500px'
-    } else if (casa == 7){
+    } else if (casa == 7) {
 
         moldura.style.left = '580px'
-    } else if (casa == 8){
+    } else if (casa == 8) {
 
         moldura.style.left = '660px'
-    } else if (casa == 9){
+    } else if (casa == 9) {
 
         moldura.style.left = '740px'
-    } else if (casa == 10){
+    } else if (casa == 10) {
 
         moldura.style.left = '820px'
-    } else if (casa == 11){
+    } else if (casa == 11) {
 
         moldura.style.left = '900px'
-    } else if (casa == 12){
+    } else if (casa == 12) {
 
         moldura.style.left = '980px'
     }
-    
+
 }
 
 ex1.onclick = function () {
 
     apagar()
 
+    lista.style.right = '-550px'
+
     molduraF(5)
 
-    for(i = 5; i < 9; i++){
+    for (i = 5; i < 9; i++) {
 
         corda6[i].style.display = 'block'
         corda6[i].style.backgroundColor = 'greeyellow'
@@ -133,28 +662,103 @@ ex1.onclick = function () {
         corda1[i].style.backgroundColor = 'greeyellow'
     }
 
-   
-    
+
+
 }
+
+
 
 ex2.onclick = function () {
 
     apagar()
 
-    mostrarC()
-    mostrarEb()
-    mostrarF()
+    contadorPosicao = 0
+    lista.style.right = '-550px'
+
+    video.style.display = 'block'
+
+
+
     mostrarG()
-    mostrarBb()
+    mostrarA()
+    mostrarB()
+    mostrarC()
+    mostrarD()
+    mostrarE()
+    mostrarFS()
 
 
-    
+
+
+
+}
+
+lista.onmouseleave = function () {
+
+    lista.style.right = '-550px'
+    for (i = 0; i < corda.length; i++) {
+
+        corda[i].style.filter = 'blur(0px)'
+
+
+    }
+
+
+
+    for (i = 0; i < traste.length; i++) {
+
+        traste[i].style.filter = 'blur(0px)'
+
+
+    }
+
+
+    for (i = 0; i < bolinha.length; i++) {
+
+        bolinha[i].style.filter = 'blur(0px)'
+
+
+    }
+
+    for (i = 0; i < nota.length; i++) {
+
+        nota[i].style.filter = 'blur(0px)'
+
+
+    }
+
 }
 
 ex3.onclick = function () {
 
-    pdf.src = 'mrpc.pdf'
-    
+    pdf.src = '3em3.pdf'
+    lista.style.right = '-550px'
+    video.style.display = 'block'
+    video.src = 'https://www.youtube.com/embed/OyV6Y5StgZw?list=PLKJpTqKLvfLKCmmRzBkyWvEyILKXtMkR2'
+
+    mostrarG()
+    mostrarA()
+    mostrarB()
+    mostrarC()
+    mostrarD()
+    mostrarE()
+    mostrarFS()
+}
+
+ex4.onclick = function () {
+
+    pdf.src = '4em4.pdf'
+    lista.style.right = '-550px'
+    video.style.display = 'block'
+    video.src = 'https://www.youtube.com/embed/rEUQSj7mcR8?list=PLKJpTqKLvfLKCmmRzBkyWvEyILKXtMkR2'
+
+    mostrarG()
+    mostrarA()
+    mostrarB()
+    mostrarC()
+    mostrarD()
+    mostrarE()
+    mostrarFS()
 }
 
 
@@ -183,159 +787,198 @@ botao1.onclick = function () {
 
 botao0.onclick = function () {
 
-    if (estrutura.value == 'acorde' && tipo.value == 'maior' && tonalidade.value == 'c' && posicao.value == '1') {
+    if (posicao.value == 1) {
 
-        cMaior()
+        console.log('shape 1')
 
-    } else if (estrutura.value == 'acorde' && tipo.value == 'maior' && tonalidade.value == 'c' && posicao.value == '2') {
+        apagar()
+        corda6[3].style.display = 'block'
+        corda6[5].style.display = 'block'
+        corda6[7].style.display = 'block'
+        corda5[3].style.display = 'block'
+        corda5[5].style.display = 'block'
+        corda5[7].style.display = 'block'
+        corda4[4].style.display = 'block'
+        corda4[5].style.display = 'block'
+        corda4[7].style.display = 'block'
+        corda3[4].style.display = 'block'
+        corda3[5].style.display = 'block'
+        corda3[7].style.display = 'block'
+        corda2[5].style.display = 'block'
+        corda2[7].style.display = 'block'
+        corda2[8].style.display = 'block'
+        corda1[5].style.display = 'block'
+        corda1[7].style.display = 'block'
+        corda1[8].style.display = 'block'
 
-        cMaior(2)
 
-    } else if (estrutura.value == 'acorde' && tipo.value == 'maior' && tonalidade.value == 'c' && posicao.value == '3') {
+    } else if (posicao.value == 2) {
 
-        cMaior(3)
+        console.log('shape 2')
 
-    } else if (estrutura.value == 'acorde' && tipo.value == 'maior' && tonalidade.value == 'c' && posicao.value == '4') {
+        apagar()
+        corda6[5].style.display = 'block'
+        corda6[7].style.display = 'block'
+        corda6[8].style.display = 'block'
+        corda5[5].style.display = 'block'
+        corda5[7].style.display = 'block'
+        corda5[9].style.display = 'block'
+        corda4[5].style.display = 'block'
+        corda4[7].style.display = 'block'
+        corda4[9].style.display = 'block'
+        corda3[5].style.display = 'block'
+        corda3[7].style.display = 'block'
+        corda3[9].style.display = 'block'
+        corda2[7].style.display = 'block'
+        corda2[8].style.display = 'block'
+        corda2[10].style.display = 'block'
+        corda1[7].style.display = 'block'
+        corda1[8].style.display = 'block'
+        corda1[10].style.display = 'block'
 
-        cMaior(4)
 
-    } else if (estrutura.value == 'acorde' && tipo.value == 'maior' && tonalidade.value == 'c' && posicao.value == '5') {
+    } else if (posicao.value == 3) {
 
-        cMaior(5)
+        console.log('shape 3')
 
-    } else if (estrutura.value == 'acorde' && tipo.value == 'maior' && tonalidade.value == 'cs' && posicao.value == '1') {
+        apagar()
+        corda6[7].style.display = 'block'
+        corda6[8].style.display = 'block'
+        corda6[10].style.display = 'block'
+        corda5[7].style.display = 'block'
+        corda5[9].style.display = 'block'
+        corda5[10].style.display = 'block'
+        corda4[7].style.display = 'block'
+        corda4[9].style.display = 'block'
+        corda4[10].style.display = 'block'
+        corda3[7].style.display = 'block'
+        corda3[9].style.display = 'block'
+        corda3[11].style.display = 'block'
+        corda2[8].style.display = 'block'
+        corda2[10].style.display = 'block'
+        corda2[12].style.display = 'block'
+        corda1[8].style.display = 'block'
+        corda1[10].style.display = 'block'
+        corda1[12].style.display = 'block'
 
-        cSMaior()
 
-    } else if (estrutura.value == 'acorde' && tipo.value == 'maior' && tonalidade.value == 'cs' && posicao.value == '2') {
+    } else if (posicao.value == 4) {
 
-        cSMaior(2)
+        console.log('shape 4')
 
-    } else if (estrutura.value == 'acorde' && tipo.value == 'maior' && tonalidade.value == 'cs' && posicao.value == '3') {
+        apagar()
+        corda6[8].style.display = 'block'
+        corda6[10].style.display = 'block'
+        corda6[12].style.display = 'block'
+        corda5[9].style.display = 'block'
+        corda5[10].style.display = 'block'
+        corda5[12].style.display = 'block'
+        corda4[9].style.display = 'block'
+        corda4[10].style.display = 'block'
+        corda4[12].style.display = 'block'
+        corda3[9].style.display = 'block'
+        corda3[11].style.display = 'block'
+        corda3[12].style.display = 'block'
+        corda2[10].style.display = 'block'
+        corda2[12].style.display = 'block'
+        corda2[13].style.display = 'block'
+        corda1[10].style.display = 'block'
+        corda1[12].style.display = 'block'
+        corda1[14].style.display = 'block'
 
-        cSMaior(3)
 
-    } else if (estrutura.value == 'acorde' && tipo.value == 'maior' && tonalidade.value == 'cs' && posicao.value == '4') {
+    } else if (posicao.value == 5) {
 
-        cSMaior(4)
+        console.log('shape 5')
 
-    } else if (estrutura.value == 'acorde' && tipo.value == 'maior' && tonalidade.value == 'cs' && posicao.value == '5') {
+        apagar()
+        corda6[10].style.display = 'block'
+        corda6[12].style.display = 'block'
+        corda6[14].style.display = 'block'
+        corda5[10].style.display = 'block'
+        corda5[12].style.display = 'block'
+        corda5[14].style.display = 'block'
+        corda4[10].style.display = 'block'
+        corda4[12].style.display = 'block'
+        corda4[14].style.display = 'block'
+        corda3[11].style.display = 'block'
+        corda3[12].style.display = 'block'
+        corda3[14].style.display = 'block'
+        corda2[12].style.display = 'block'
+        corda2[13].style.display = 'block'
+        corda2[15].style.display = 'block'
+        corda1[12].style.display = 'block'
+        corda1[14].style.display = 'block'
+        corda1[15].style.display = 'block'
 
-        cSMaior(5)
 
-    } else if (estrutura.value == 'acorde' && tipo.value == 'menor' && tonalidade.value == 'c' && posicao.value == '1') {
+    } else if (posicao.value == 6) {
 
-        cMenor()
+        console.log('shape 6')
+
+        apagar()
+        corda6[0].style.display = 'block'
+        corda6[2].style.display = 'block'
+        corda6[3].style.display = 'block'
+        corda5[0].style.display = 'block'
+        corda5[2].style.display = 'block'
+        corda5[3].style.display = 'block'
+        corda4[0].style.display = 'block'
+        corda4[2].style.display = 'block'
+        corda4[4].style.display = 'block'
+        corda3[0].style.display = 'block'
+        corda3[2].style.display = 'block'
+        corda3[4].style.display = 'block'
+        corda2[1].style.display = 'block'
+        corda2[3].style.display = 'block'
+        corda2[5].style.display = 'block'
+        corda1[2].style.display = 'block'
+        corda1[3].style.display = 'block'
+        corda1[5].style.display = 'block'
+
+
+    } else if (posicao.value == 7) {
+
+        console.log('shape 7')
+
+        apagar()
+        corda6[2].style.display = 'block'
+        corda6[3].style.display = 'block'
+        corda6[5].style.display = 'block'
+        corda5[2].style.display = 'block'
+        corda5[3].style.display = 'block'
+        corda5[5].style.display = 'block'
+        corda4[2].style.display = 'block'
+        corda4[4].style.display = 'block'
+        corda4[5].style.display = 'block'
+        corda3[2].style.display = 'block'
+        corda3[4].style.display = 'block'
+        corda3[5].style.display = 'block'
+        corda2[3].style.display = 'block'
+        corda2[5].style.display = 'block'
+        corda2[7].style.display = 'block'
+        corda1[3].style.display = 'block'
+        corda1[5].style.display = 'block'
+        corda1[7].style.display = 'block'
+
+
+    } else if (posicao.value == 8) {
+
+        apagar()
+
+        mostrarG()
+        mostrarA()
+        mostrarB()
+        mostrarC()
+        mostrarD()
+        mostrarE()
+        mostrarFS()
+
+
 
     }
 
-    else if (estrutura.value == 'acorde' && tipo.value == 'maior' && tonalidade.value == 'd' && posicao.value == '1') {
 
-        dMaior()
-
-    } else if (estrutura.value == 'acorde' && tipo.value == 'maior' && tonalidade.value == 'd' && posicao.value == '2') {
-
-        dMaior(2)
-
-    } else if (estrutura.value == 'acorde' && tipo.value == 'maior' && tonalidade.value == 'd' && posicao.value == '3') {
-
-        dMaior(3)
-
-    } else if (estrutura.value == 'acorde' && tipo.value == 'maior' && tonalidade.value == 'd' && posicao.value == '4') {
-
-        dMaior(4)
-
-    } else if (estrutura.value == 'acorde' && tipo.value == 'maior' && tonalidade.value == 'd' && posicao.value == '5') {
-
-        dMaior(5)
-
-    }
-
-    else if (estrutura.value == 'acorde' && tipo.value == 'maior' && tonalidade.value == 'e' && posicao.value == '1') {
-
-        eMaior()
-
-    } else if (estrutura.value == 'acorde' && tipo.value == 'maior' && tonalidade.value == 'f' && posicao.value == '1') {
-
-        fMaior()
-
-    } else if (estrutura.value == 'acorde' && tipo.value == 'maior' && tonalidade.value == 'g' && posicao.value == '1') {
-
-        gMaior()
-
-    } else if (estrutura.value == 'acorde' && tipo.value == 'maior' && tonalidade.value == 'a' && posicao.value == '1') {
-
-        aMaior()
-
-    } else if (estrutura.value == 'acorde' && tipo.value == 'maior' && tonalidade.value == 'b' && posicao.value == '1') {
-
-        bMaior()
-
-    } else if (estrutura.value == 'acorde' && tipo.value == '7' && tonalidade.value == 'c' && posicao.value == '1') {
-
-        c7()
-
-    } else if (estrutura.value == 'acorde' && tipo.value == '7' && tonalidade.value == 'd' && posicao.value == '1') {
-
-        d7()
-
-    } else if (estrutura.value == 'acorde' && tipo.value == '7' && tonalidade.value == 'e' && posicao.value == '1') {
-
-        e7()
-
-    } else if (estrutura.value == 'escala' && tipo.value == 'maior' && tonalidade.value == 'c' && posicao.value == '6') {
-
-        escalaCMaiorF()
-
-    } else if (estrutura.value == 'escala' && tipo.value == 'maior' && tonalidade.value == 'd' && posicao.value == '6') {
-
-        escalaDMaiorF()
-
-    } else if (estrutura.value == 'escala' && tipo.value == 'maior' && tonalidade.value == 'e' && posicao.value == '6') {
-
-        escalaEMaiorF()
-
-    } else if (estrutura.value == 'escala' && tipo.value == 'maior' && tonalidade.value == 'f' && posicao.value == '6') {
-
-        escalaFMaiorF()
-
-    } else if (estrutura.value == 'escala' && tipo.value == 'maior' && tonalidade.value == 'g' && posicao.value == '6') {
-
-        escalaGMaiorF()
-
-    } else if (estrutura.value == 'escala' && tipo.value == 'maior' && tonalidade.value == 'a' && posicao.value == '6') {
-
-        escalaAMaiorF()
-
-    } else if (estrutura.value == 'escala' && tipo.value == 'maior' && tonalidade.value == 'b' && posicao.value == '6') {
-
-        escalaBMaiorF()
-
-    } else if (estrutura.value == 'escala' && tipo.value == 'maior' && tonalidade.value == 'f' && posicao.value == '6') {
-
-        escalaFMaiorF()
-
-    } else if (estrutura.value == 'escala' && tipo.value == 'maior' && tonalidade.value == 'as' && posicao.value == '6') {
-
-        escalaBbMaiorF()
-
-    } else if (estrutura.value == 'escala' && tipo.value == 'maior' && tonalidade.value == 'ds' && posicao.value == '6') {
-
-        escalaEbMaiorF()
-
-    } else if (estrutura.value == 'escala' && tipo.value == 'maior' && tonalidade.value == 'gs' && posicao.value == '6') {
-
-        escalaAbMaiorF()
-
-    } else if (estrutura.value == 'escala' && tipo.value == 'maior' && tonalidade.value == 'cs' && posicao.value == '6') {
-
-        escalaDbMaiorF()
-
-    } else if (estrutura.value == 'escala' && tipo.value == 'maior' && tonalidade.value == 'fs' && posicao.value == '6') {
-
-        escalaGbMaiorF()
-
-    } 
 
 }
 
@@ -455,13 +1098,13 @@ let corda6 = [corda6_casa0, corda6_casa1, corda6_casa2, corda6_casa3, corda6_cas
 //******************************************************************************************************/
 
 
-    
 
 
 
 
 
-console.log(corda1[0].textContent)
+
+
 
 let escalas = document.getElementById('escalas')
 let acordes = document.getElementById('acordes')
@@ -470,26 +1113,6 @@ let quadroEscalas = document.getElementById('quadroEscalas')
 let quadroAcordes = document.getElementById('quadroAcordes')
 let quadroArpejos = document.getElementById('quadroArpejos')
 
-quadroEscalas.onmouseleave = function () {
-
-    quadroEscalas.style.display = 'none'
-    escalas.style.backgroundColor = 'rgb(112, 112, 112)'
-
-}
-
-quadroAcordes.onmouseleave = function () {
-
-    quadroAcordes.style.display = 'none'
-    acordes.style.backgroundColor = 'rgb(112, 112, 112)'
-
-}
-
-quadroArpejos.onmouseleave = function () {
-
-    quadroArpejos.style.display = 'none'
-    arpejos.style.backgroundColor = 'rgb(112, 112, 112)'
-
-}
 
 acordes.onmouseover = function () {
 
@@ -528,42 +1151,30 @@ escalas.onmouseover = function () {
 }
 
 
-clear.onclick = function limpar() {
+clear.onclick = function () {
 
     pestana.style.display = 'none'
     moldura.style.display = 'none'
+    console.log('limpar')
 
-
-    for (i = 0; i < 16; i++) {
-
-        corda1[i].style.display = 'none'
-        corda2[i].style.display = 'none'
-        corda3[i].style.display = 'none'
-        corda4[i].style.display = 'none'
-        corda5[i].style.display = 'none'
-        corda6[i].style.display = 'none'
-
-    }
+    apagar()
 }
 
 
 
 
-mostrar.onclick = function mostrar() {
+mostrar.onclick = function () {
 
 
+    for (i = 0; i < nota.length; i++) {
 
-
-    for (i = 0; i < 16; i++) {
-
-        corda1[i].style.display = 'block'
-        corda2[i].style.display = 'block'
-        corda3[i].style.display = 'block'
-        corda4[i].style.display = 'block'
-        corda5[i].style.display = 'block'
-        corda6[i].style.display = 'block'      
+        nota[i].style.display = 'block'
 
     }
+
+    console.log('mostrar')
+
+
 }
 //************************************************************************************************** */
 function cMaior(posicao) {
@@ -1085,17 +1696,14 @@ function bMaior(posicao) {
 function apagar() {
 
     pestana.style.display = 'none'
+    moldura.style.display = 'none'
 
-    for (i = 0; i < 16; i++) {
 
-        corda1[i].style.display = 'none'
-        corda2[i].style.display = 'none'
-        corda3[i].style.display = 'none'
-        corda4[i].style.display = 'none'
-        corda5[i].style.display = 'none'
-        corda6[i].style.display = 'none'
+    for (i = 0; i < nota.length; i++) {
 
+        nota[i].style.display = 'none'
     }
+
 
 }
 
@@ -1111,7 +1719,7 @@ let bracoGuitarra = [
     ['A', 'B', 'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A'],
     ['E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E']]
 
-console.log(bracoGuitarra[2][0])
+
 
 
 let escalaCromatica = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B']
@@ -1222,59 +1830,59 @@ function pestanaF(casa) {
 
 function mostrarC() {
 
-    for (i = 0; i < 16; i++){
+    for (i = 0; i < 16; i++) {
 
-        if (corda1[i].textContent == 'C'){
+        if (corda1[i].textContent == 'C') {
 
             corda1[i].style.display = 'block'
             corda1[i].style.backgroundColor = 'greenyellow'
-            
+
 
 
         }
-        if (corda2[i].textContent == 'C'){
+        if (corda2[i].textContent == 'C') {
 
-           
+
             corda2[i].style.display = 'block'
             corda2[i].style.backgroundColor = 'greenyellow'
-           
+
 
 
         }
 
-        if (corda3[i].textContent == 'C'){
+        if (corda3[i].textContent == 'C') {
 
-           
+
             corda3[i].style.display = 'block'
             corda3[i].style.backgroundColor = 'greenyellow'
-           
+
 
         }
 
-        if (corda4[i].textContent == 'C'){
+        if (corda4[i].textContent == 'C') {
 
-           
-            
+
+
             corda4[i].style.display = 'block'
             corda4[i].style.backgroundColor = 'greenyellow'
-            
+
 
 
         }
 
-        if (corda5[i].textContent == 'C'){
+        if (corda5[i].textContent == 'C') {
 
-           
+
             corda5[i].style.display = 'block'
             corda5[i].style.backgroundColor = 'greenyellow'
-            
+
 
 
         }
 
-        if (corda6[i].textContent == 'C'){
+        if (corda6[i].textContent == 'C') {
 
-           
+
             corda6[i].style.display = 'block'
             corda6[i].style.backgroundColor = 'greenyellow'
 
@@ -1283,64 +1891,64 @@ function mostrarC() {
 
 
     }
-    
+
 }
 
 function mostrarCS() {
 
-    for (i = 0; i < 16; i++){
+    for (i = 0; i < 16; i++) {
 
-        if (corda1[i].textContent == 'C#'){
+        if (corda1[i].textContent == 'C#') {
 
             corda1[i].style.display = 'block'
             corda1[i].style.backgroundColor = 'greenyellow'
-            
+
 
 
         }
-        if (corda2[i].textContent == 'C#'){
+        if (corda2[i].textContent == 'C#') {
 
-           
+
             corda2[i].style.display = 'block'
             corda2[i].style.backgroundColor = 'greenyellow'
-           
+
 
 
         }
 
-        if (corda3[i].textContent == 'C#'){
+        if (corda3[i].textContent == 'C#') {
 
-           
+
             corda3[i].style.display = 'block'
             corda3[i].style.backgroundColor = 'greenyellow'
-           
+
 
         }
 
-        if (corda4[i].textContent == 'C#'){
+        if (corda4[i].textContent == 'C#') {
 
-           
-            
+
+
             corda4[i].style.display = 'block'
             corda4[i].style.backgroundColor = 'greenyellow'
-            
+
 
 
         }
 
-        if (corda5[i].textContent == 'C#'){
+        if (corda5[i].textContent == 'C#') {
 
-           
+
             corda5[i].style.display = 'block'
             corda5[i].style.backgroundColor = 'greenyellow'
-            
+
 
 
         }
 
-        if (corda6[i].textContent == 'C#'){
+        if (corda6[i].textContent == 'C#') {
 
-           
+
             corda6[i].style.display = 'block'
             corda6[i].style.backgroundColor = 'greenyellow'
 
@@ -1349,47 +1957,47 @@ function mostrarCS() {
 
 
     }
-    
+
 }
 
 function mostrarDb() {
 
-    for (i = 0; i < 16; i++){
+    for (i = 0; i < 16; i++) {
 
-        if (corda1[i].textContent == 'C#'){
+        if (corda1[i].textContent == 'C#') {
 
             corda1[i].style.display = 'block'
             corda1[i].style.backgroundColor = 'greenyellow'
             corda1[i].innerHTML = 'Db'
-            
+
 
 
         }
-        if (corda2[i].textContent == 'C#'){
+        if (corda2[i].textContent == 'C#') {
 
-           
+
             corda2[i].style.display = 'block'
             corda2[i].style.backgroundColor = 'greenyellow'
             corda2[i].innerHTML = 'Db'
-           
+
 
 
         }
 
-        if (corda3[i].textContent == 'C#'){
+        if (corda3[i].textContent == 'C#') {
 
-           
+
             corda3[i].style.display = 'block'
             corda3[i].style.backgroundColor = 'greenyellow'
             corda3[i].innerHTML = 'Db'
-           
+
 
         }
 
-        if (corda4[i].textContent == 'C#'){
+        if (corda4[i].textContent == 'C#') {
 
-           
-            
+
+
             corda4[i].style.display = 'block'
             corda4[i].style.backgroundColor = 'greenyellow'
             corda4[i].innerHTML = 'Db'
@@ -1397,9 +2005,9 @@ function mostrarDb() {
 
         }
 
-        if (corda5[i].textContent == 'C#'){
+        if (corda5[i].textContent == 'C#') {
 
-           
+
             corda5[i].style.display = 'block'
             corda5[i].style.backgroundColor = 'greenyellow'
             corda5[i].innerHTML = 'Db'
@@ -1407,9 +2015,9 @@ function mostrarDb() {
 
         }
 
-        if (corda6[i].textContent == 'C#'){
+        if (corda6[i].textContent == 'C#') {
 
-           
+
             corda6[i].style.display = 'block'
             corda6[i].style.backgroundColor = 'greenyellow'
             corda6[i].innerHTML = 'Db'
@@ -1419,65 +2027,65 @@ function mostrarDb() {
 
 
     }
-    
+
 }
 
 
 function mostrarD() {
 
-    for (i = 0; i < 16; i++){
+    for (i = 0; i < 16; i++) {
 
-        if (corda1[i].textContent == 'D'){
+        if (corda1[i].textContent == 'D') {
 
             corda1[i].style.display = 'block'
             corda1[i].style.backgroundColor = 'greenyellow'
-            
+
 
 
         }
-        if (corda2[i].textContent == 'D'){
+        if (corda2[i].textContent == 'D') {
 
-           
+
             corda2[i].style.display = 'block'
             corda2[i].style.backgroundColor = 'greenyellow'
-           
+
 
 
         }
 
-        if (corda3[i].textContent == 'D'){
+        if (corda3[i].textContent == 'D') {
 
-           
+
             corda3[i].style.display = 'block'
             corda3[i].style.backgroundColor = 'greenyellow'
-           
+
 
         }
 
-        if (corda4[i].textContent == 'D'){
+        if (corda4[i].textContent == 'D') {
 
-           
-            
+
+
             corda4[i].style.display = 'block'
             corda4[i].style.backgroundColor = 'greenyellow'
-            
+
 
 
         }
 
-        if (corda5[i].textContent == 'D'){
+        if (corda5[i].textContent == 'D') {
 
-           
+
             corda5[i].style.display = 'block'
             corda5[i].style.backgroundColor = 'greenyellow'
-            
+
 
 
         }
 
-        if (corda6[i].textContent == 'D'){
+        if (corda6[i].textContent == 'D') {
 
-           
+
             corda6[i].style.display = 'block'
             corda6[i].style.backgroundColor = 'greenyellow'
 
@@ -1486,64 +2094,64 @@ function mostrarD() {
 
 
     }
-    
+
 }
 
 function mostrarDS() {
 
-    for (i = 0; i < 16; i++){
+    for (i = 0; i < 16; i++) {
 
-        if (corda1[i].textContent == 'D#'){
+        if (corda1[i].textContent == 'D#') {
 
             corda1[i].style.display = 'block'
             corda1[i].style.backgroundColor = 'greenyellow'
-            
+
 
 
         }
-        if (corda2[i].textContent == 'D#'){
+        if (corda2[i].textContent == 'D#') {
 
-           
+
             corda2[i].style.display = 'block'
             corda2[i].style.backgroundColor = 'greenyellow'
-           
+
 
 
         }
 
-        if (corda3[i].textContent == 'D#'){
+        if (corda3[i].textContent == 'D#') {
 
-           
+
             corda3[i].style.display = 'block'
             corda3[i].style.backgroundColor = 'greenyellow'
-           
+
 
         }
 
-        if (corda4[i].textContent == 'D#'){
+        if (corda4[i].textContent == 'D#') {
 
-           
-            
+
+
             corda4[i].style.display = 'block'
             corda4[i].style.backgroundColor = 'greenyellow'
-            
+
 
 
         }
 
-        if (corda5[i].textContent == 'D#'){
+        if (corda5[i].textContent == 'D#') {
 
-           
+
             corda5[i].style.display = 'block'
             corda5[i].style.backgroundColor = 'greenyellow'
-            
+
 
 
         }
 
-        if (corda6[i].textContent == 'D#'){
+        if (corda6[i].textContent == 'D#') {
 
-           
+
             corda6[i].style.display = 'block'
             corda6[i].style.backgroundColor = 'greenyellow'
 
@@ -1552,24 +2160,24 @@ function mostrarDS() {
 
 
     }
-    
+
 }
 function mostrarEb() {
 
-    for (i = 0; i < 16; i++){
+    for (i = 0; i < 16; i++) {
 
-        if (corda1[i].textContent == 'D#'){
+        if (corda1[i].textContent == 'D#') {
 
             corda1[i].style.display = 'block'
             corda1[i].style.backgroundColor = 'greenyellow'
             corda1[i].innerHTML = 'Eb'
-            
+
 
 
         }
-        if (corda2[i].textContent == 'D#'){
+        if (corda2[i].textContent == 'D#') {
 
-           
+
             corda2[i].style.display = 'block'
             corda2[i].style.backgroundColor = 'greenyellow'
             corda2[i].innerHTML = 'Eb'
@@ -1577,19 +2185,19 @@ function mostrarEb() {
 
         }
 
-        if (corda3[i].textContent == 'D#'){
+        if (corda3[i].textContent == 'D#') {
 
-           
+
             corda3[i].style.display = 'block'
             corda3[i].style.backgroundColor = 'greenyellow'
             corda3[i].innerHTML = 'Eb'
 
         }
 
-        if (corda4[i].textContent == 'D#'){
+        if (corda4[i].textContent == 'D#') {
 
-           
-            
+
+
             corda4[i].style.display = 'block'
             corda4[i].style.backgroundColor = 'greenyellow'
             corda4[i].innerHTML = 'Eb'
@@ -1597,9 +2205,9 @@ function mostrarEb() {
 
         }
 
-        if (corda5[i].textContent == 'D#'){
+        if (corda5[i].textContent == 'D#') {
 
-           
+
             corda5[i].style.display = 'block'
             corda5[i].style.backgroundColor = 'greenyellow'
             corda5[i].innerHTML = 'Eb'
@@ -1607,9 +2215,9 @@ function mostrarEb() {
 
         }
 
-        if (corda6[i].textContent == 'D#'){
+        if (corda6[i].textContent == 'D#') {
 
-           
+
             corda6[i].style.display = 'block'
             corda6[i].style.backgroundColor = 'greenyellow'
             corda6[i].innerHTML = 'Eb'
@@ -1619,65 +2227,65 @@ function mostrarEb() {
 
 
     }
-    
+
 }
 
 
 function mostrarE() {
 
-    for (i = 0; i < 16; i++){
+    for (i = 0; i < 16; i++) {
 
-        if (corda1[i].textContent == 'E'){
+        if (corda1[i].textContent == 'E') {
 
             corda1[i].style.display = 'block'
             corda1[i].style.backgroundColor = 'greenyellow'
-            
+
 
 
         }
-        if (corda2[i].textContent == 'E'){
+        if (corda2[i].textContent == 'E') {
 
-           
+
             corda2[i].style.display = 'block'
             corda2[i].style.backgroundColor = 'greenyellow'
-           
+
 
 
         }
 
-        if (corda3[i].textContent == 'E'){
+        if (corda3[i].textContent == 'E') {
 
-           
+
             corda3[i].style.display = 'block'
             corda3[i].style.backgroundColor = 'greenyellow'
-           
+
 
         }
 
-        if (corda4[i].textContent == 'E'){
+        if (corda4[i].textContent == 'E') {
 
-           
-            
+
+
             corda4[i].style.display = 'block'
             corda4[i].style.backgroundColor = 'greenyellow'
-            
+
 
 
         }
 
-        if (corda5[i].textContent == 'E'){
+        if (corda5[i].textContent == 'E') {
 
-           
+
             corda5[i].style.display = 'block'
             corda5[i].style.backgroundColor = 'greenyellow'
-            
+
 
 
         }
 
-        if (corda6[i].textContent == 'E'){
+        if (corda6[i].textContent == 'E') {
 
-           
+
             corda6[i].style.display = 'block'
             corda6[i].style.backgroundColor = 'greenyellow'
 
@@ -1686,64 +2294,64 @@ function mostrarE() {
 
 
     }
-    
+
 }
 
 function mostrarF() {
 
-    for (i = 0; i < 16; i++){
+    for (i = 0; i < 16; i++) {
 
-        if (corda1[i].textContent == 'F'){
+        if (corda1[i].textContent == 'F') {
 
             corda1[i].style.display = 'block'
             corda1[i].style.backgroundColor = 'greenyellow'
-            
+
 
 
         }
-        if (corda2[i].textContent == 'F'){
+        if (corda2[i].textContent == 'F') {
 
-           
+
             corda2[i].style.display = 'block'
             corda2[i].style.backgroundColor = 'greenyellow'
-           
+
 
 
         }
 
-        if (corda3[i].textContent == 'F'){
+        if (corda3[i].textContent == 'F') {
 
-           
+
             corda3[i].style.display = 'block'
             corda3[i].style.backgroundColor = 'greenyellow'
-           
+
 
         }
 
-        if (corda4[i].textContent == 'F'){
+        if (corda4[i].textContent == 'F') {
 
-           
-            
+
+
             corda4[i].style.display = 'block'
             corda4[i].style.backgroundColor = 'greenyellow'
-            
+
 
 
         }
 
-        if (corda5[i].textContent == 'F'){
+        if (corda5[i].textContent == 'F') {
 
-           
+
             corda5[i].style.display = 'block'
             corda5[i].style.backgroundColor = 'greenyellow'
-            
+
 
 
         }
 
-        if (corda6[i].textContent == 'F'){
+        if (corda6[i].textContent == 'F') {
 
-           
+
             corda6[i].style.display = 'block'
             corda6[i].style.backgroundColor = 'greenyellow'
 
@@ -1752,45 +2360,45 @@ function mostrarF() {
 
 
     }
-    
+
 }
 function mostrarGb() {
 
-    for (i = 0; i < 16; i++){
+    for (i = 0; i < 16; i++) {
 
-        if (corda1[i].textContent == 'F#'){
+        if (corda1[i].textContent == 'F#') {
 
             corda1[i].style.display = 'block'
             corda1[i].style.backgroundColor = 'greenyellow'
             corda1[i].innerHTML = 'Gb'
-            
+
 
 
         }
-        if (corda2[i].textContent == 'F#'){
+        if (corda2[i].textContent == 'F#') {
 
-           
+
             corda2[i].style.display = 'block'
             corda2[i].style.backgroundColor = 'greenyellow'
             corda2[i].innerHTML = 'Gb'
-           
+
 
 
         }
 
-        if (corda3[i].textContent == 'F#'){
+        if (corda3[i].textContent == 'F#') {
 
-           
+
             corda3[i].style.display = 'block'
             corda3[i].style.backgroundColor = 'greenyellow'
             corda3[i].innerHTML = 'Gb'
 
         }
 
-        if (corda4[i].textContent == 'F#'){
+        if (corda4[i].textContent == 'F#') {
 
-           
-            
+
+
             corda4[i].style.display = 'block'
             corda4[i].style.backgroundColor = 'greenyellow'
             corda4[i].innerHTML = 'Gb'
@@ -1798,9 +2406,9 @@ function mostrarGb() {
 
         }
 
-        if (corda5[i].textContent == 'F#'){
+        if (corda5[i].textContent == 'F#') {
 
-           
+
             corda5[i].style.display = 'block'
             corda5[i].style.backgroundColor = 'greenyellow'
             corda5[i].innerHTML = 'Gb'
@@ -1808,9 +2416,9 @@ function mostrarGb() {
 
         }
 
-        if (corda6[i].textContent == 'F#'){
+        if (corda6[i].textContent == 'F#') {
 
-           
+
             corda6[i].style.display = 'block'
             corda6[i].style.backgroundColor = 'greenyellow'
             corda6[i].innerHTML = 'Gb'
@@ -1820,65 +2428,65 @@ function mostrarGb() {
 
 
     }
-    
+
 }
 
 
 function mostrarFS() {
 
-    for (i = 0; i < 16; i++){
+    for (i = 0; i < 16; i++) {
 
-        if (corda1[i].textContent == 'F#'){
+        if (corda1[i].textContent == 'F#') {
 
             corda1[i].style.display = 'block'
             corda1[i].style.backgroundColor = 'greenyellow'
-            
+
 
 
         }
-        if (corda2[i].textContent == 'F#'){
+        if (corda2[i].textContent == 'F#') {
 
-           
+
             corda2[i].style.display = 'block'
             corda2[i].style.backgroundColor = 'greenyellow'
-           
+
 
 
         }
 
-        if (corda3[i].textContent == 'F#'){
+        if (corda3[i].textContent == 'F#') {
 
-           
+
             corda3[i].style.display = 'block'
             corda3[i].style.backgroundColor = 'greenyellow'
-           
+
 
         }
 
-        if (corda4[i].textContent == 'F#'){
+        if (corda4[i].textContent == 'F#') {
 
-           
-            
+
+
             corda4[i].style.display = 'block'
             corda4[i].style.backgroundColor = 'greenyellow'
-            
+
 
 
         }
 
-        if (corda5[i].textContent == 'F#'){
+        if (corda5[i].textContent == 'F#') {
 
-           
+
             corda5[i].style.display = 'block'
             corda5[i].style.backgroundColor = 'greenyellow'
-            
+
 
 
         }
 
-        if (corda6[i].textContent == 'F#'){
+        if (corda6[i].textContent == 'F#') {
 
-           
+
             corda6[i].style.display = 'block'
             corda6[i].style.backgroundColor = 'greenyellow'
 
@@ -1887,64 +2495,64 @@ function mostrarFS() {
 
 
     }
-    
+
 }
 
 function mostrarG() {
 
-    for (i = 0; i < 16; i++){
+    for (i = 0; i < 16; i++) {
 
-        if (corda1[i].textContent == 'G'){
+        if (corda1[i].textContent == 'G') {
 
             corda1[i].style.display = 'block'
             corda1[i].style.backgroundColor = 'greenyellow'
-            
+
 
 
         }
-        if (corda2[i].textContent == 'G'){
+        if (corda2[i].textContent == 'G') {
 
-           
+
             corda2[i].style.display = 'block'
             corda2[i].style.backgroundColor = 'greenyellow'
-           
+
 
 
         }
 
-        if (corda3[i].textContent == 'G'){
+        if (corda3[i].textContent == 'G') {
 
-           
+
             corda3[i].style.display = 'block'
             corda3[i].style.backgroundColor = 'greenyellow'
-           
+
 
         }
 
-        if (corda4[i].textContent == 'G'){
+        if (corda4[i].textContent == 'G') {
 
-           
-            
+
+
             corda4[i].style.display = 'block'
             corda4[i].style.backgroundColor = 'greenyellow'
-            
+
 
 
         }
 
-        if (corda5[i].textContent == 'G'){
+        if (corda5[i].textContent == 'G') {
 
-           
+
             corda5[i].style.display = 'block'
             corda5[i].style.backgroundColor = 'greenyellow'
-            
+
 
 
         }
 
-        if (corda6[i].textContent == 'G'){
+        if (corda6[i].textContent == 'G') {
 
-           
+
             corda6[i].style.display = 'block'
             corda6[i].style.backgroundColor = 'greenyellow'
 
@@ -1953,13 +2561,13 @@ function mostrarG() {
 
 
     }
-    
+
 }
 function mostrarAb() {
 
-    for (i = 0; i < 16; i++){
+    for (i = 0; i < 16; i++) {
 
-        if (corda1[i].textContent == 'G#'){
+        if (corda1[i].textContent == 'G#') {
 
             corda1[i].style.display = 'block'
             corda1[i].style.backgroundColor = 'greenyellow'
@@ -1967,30 +2575,30 @@ function mostrarAb() {
 
 
         }
-        if (corda2[i].textContent == 'G#'){
+        if (corda2[i].textContent == 'G#') {
 
-           
+
             corda2[i].style.display = 'block'
             corda2[i].style.backgroundColor = 'greenyellow'
             corda2[i].innerHTML = 'Ab'
-           
+
 
 
         }
 
-        if (corda3[i].textContent == 'G#'){
+        if (corda3[i].textContent == 'G#') {
 
-           
+
             corda3[i].style.display = 'block'
             corda3[i].style.backgroundColor = 'greenyellow'
             corda3[i].innerHTML = 'Ab'
 
         }
 
-        if (corda4[i].textContent == 'G#'){
+        if (corda4[i].textContent == 'G#') {
 
-           
-            
+
+
             corda4[i].style.display = 'block'
             corda4[i].style.backgroundColor = 'greenyellow'
             corda4[i].innerHTML = 'Ab'
@@ -1998,9 +2606,9 @@ function mostrarAb() {
 
         }
 
-        if (corda5[i].textContent == 'G#'){
+        if (corda5[i].textContent == 'G#') {
 
-           
+
             corda5[i].style.display = 'block'
             corda5[i].style.backgroundColor = 'greenyellow'
             corda5[i].innerHTML = 'Ab'
@@ -2008,9 +2616,9 @@ function mostrarAb() {
 
         }
 
-        if (corda6[i].textContent == 'G#'){
+        if (corda6[i].textContent == 'G#') {
 
-           
+
             corda6[i].style.display = 'block'
             corda6[i].style.backgroundColor = 'greenyellow'
             corda6[i].innerHTML = 'Ab'
@@ -2020,64 +2628,64 @@ function mostrarAb() {
 
 
     }
-    
+
 }
 
 function mostrarGS() {
 
-    for (i = 0; i < 16; i++){
+    for (i = 0; i < 16; i++) {
 
-        if (corda1[i].textContent == 'G#'){
+        if (corda1[i].textContent == 'G#') {
 
             corda1[i].style.display = 'block'
             corda1[i].style.backgroundColor = 'greenyellow'
-            
+
 
 
         }
-        if (corda2[i].textContent == 'G#'){
+        if (corda2[i].textContent == 'G#') {
 
-           
+
             corda2[i].style.display = 'block'
             corda2[i].style.backgroundColor = 'greenyellow'
-           
+
 
 
         }
 
-        if (corda3[i].textContent == 'G#'){
+        if (corda3[i].textContent == 'G#') {
 
-           
+
             corda3[i].style.display = 'block'
             corda3[i].style.backgroundColor = 'greenyellow'
-           
+
 
         }
 
-        if (corda4[i].textContent == 'G#'){
+        if (corda4[i].textContent == 'G#') {
 
-           
-            
+
+
             corda4[i].style.display = 'block'
             corda4[i].style.backgroundColor = 'greenyellow'
-            
+
 
 
         }
 
-        if (corda5[i].textContent == 'G#'){
+        if (corda5[i].textContent == 'G#') {
 
-           
+
             corda5[i].style.display = 'block'
             corda5[i].style.backgroundColor = 'greenyellow'
-            
+
 
 
         }
 
-        if (corda6[i].textContent == 'G#'){
+        if (corda6[i].textContent == 'G#') {
 
-           
+
             corda6[i].style.display = 'block'
             corda6[i].style.backgroundColor = 'greenyellow'
 
@@ -2086,64 +2694,64 @@ function mostrarGS() {
 
 
     }
-    
+
 }
 
 function mostrarA() {
 
-    for (i = 0; i < 16; i++){
+    for (i = 0; i < 16; i++) {
 
-        if (corda1[i].textContent == 'A'){
+        if (corda1[i].textContent == 'A') {
 
             corda1[i].style.display = 'block'
             corda1[i].style.backgroundColor = 'greenyellow'
-            
+
 
 
         }
-        if (corda2[i].textContent == 'A'){
+        if (corda2[i].textContent == 'A') {
 
-           
+
             corda2[i].style.display = 'block'
             corda2[i].style.backgroundColor = 'greenyellow'
-           
+
 
 
         }
 
-        if (corda3[i].textContent == 'A'){
+        if (corda3[i].textContent == 'A') {
 
-           
+
             corda3[i].style.display = 'block'
             corda3[i].style.backgroundColor = 'greenyellow'
-           
+
 
         }
 
-        if (corda4[i].textContent == 'A'){
+        if (corda4[i].textContent == 'A') {
 
-           
-            
+
+
             corda4[i].style.display = 'block'
             corda4[i].style.backgroundColor = 'greenyellow'
-            
+
 
 
         }
 
-        if (corda5[i].textContent == 'A'){
+        if (corda5[i].textContent == 'A') {
 
-           
+
             corda5[i].style.display = 'block'
             corda5[i].style.backgroundColor = 'greenyellow'
-            
+
 
 
         }
 
-        if (corda6[i].textContent == 'A'){
+        if (corda6[i].textContent == 'A') {
 
-           
+
             corda6[i].style.display = 'block'
             corda6[i].style.backgroundColor = 'greenyellow'
 
@@ -2152,25 +2760,25 @@ function mostrarA() {
 
 
     }
-    
+
 }
 
 function mostrarBb() {
 
-    for (i = 0; i < 16; i++){
+    for (i = 0; i < 16; i++) {
 
-        if (corda1[i].textContent == 'A#'){
+        if (corda1[i].textContent == 'A#') {
 
             corda1[i].style.display = 'block'
             corda1[i].style.backgroundColor = 'greenyellow'
             corda1[i].innerHTML = 'Bb'
-            
+
 
 
         }
-        if (corda2[i].textContent == 'A#'){
+        if (corda2[i].textContent == 'A#') {
 
-           
+
             corda2[i].style.display = 'block'
             corda2[i].style.backgroundColor = 'greenyellow'
             corda2[i].innerHTML = 'Bb'
@@ -2178,19 +2786,19 @@ function mostrarBb() {
 
         }
 
-        if (corda3[i].textContent == 'A#'){
+        if (corda3[i].textContent == 'A#') {
 
-           
+
             corda3[i].style.display = 'block'
             corda3[i].style.backgroundColor = 'greenyellow'
             corda3[i].innerHTML = 'Bb'
 
         }
 
-        if (corda4[i].textContent == 'A#'){
+        if (corda4[i].textContent == 'A#') {
 
-           
-            
+
+
             corda4[i].style.display = 'block'
             corda4[i].style.backgroundColor = 'greenyellow'
             corda4[i].innerHTML = 'Bb'
@@ -2198,9 +2806,9 @@ function mostrarBb() {
 
         }
 
-        if (corda5[i].textContent == 'A#'){
+        if (corda5[i].textContent == 'A#') {
 
-           
+
             corda5[i].style.display = 'block'
             corda5[i].style.backgroundColor = 'greenyellow'
             corda5[i].innerHTML = 'Bb'
@@ -2208,9 +2816,9 @@ function mostrarBb() {
 
         }
 
-        if (corda6[i].textContent == 'A#'){
+        if (corda6[i].textContent == 'A#') {
 
-           
+
             corda6[i].style.display = 'block'
             corda6[i].style.backgroundColor = 'greenyellow'
             corda6[i].innerHTML = 'Bb'
@@ -2220,7 +2828,7 @@ function mostrarBb() {
 
 
     }
-    
+
 }
 
 
@@ -2228,59 +2836,59 @@ function mostrarBb() {
 
 function mostrarAS() {
 
-    for (i = 0; i < 16; i++){
+    for (i = 0; i < 16; i++) {
 
-        if (corda1[i].textContent == 'A#'){
+        if (corda1[i].textContent == 'A#') {
 
             corda1[i].style.display = 'block'
             corda1[i].style.backgroundColor = 'greenyellow'
-            
+
 
 
         }
-        if (corda2[i].textContent == 'A#'){
+        if (corda2[i].textContent == 'A#') {
 
-           
+
             corda2[i].style.display = 'block'
             corda2[i].style.backgroundColor = 'greenyellow'
-           
+
 
 
         }
 
-        if (corda3[i].textContent == 'A#'){
+        if (corda3[i].textContent == 'A#') {
 
-           
+
             corda3[i].style.display = 'block'
             corda3[i].style.backgroundColor = 'greenyellow'
-           
+
 
         }
 
-        if (corda4[i].textContent == 'A#'){
+        if (corda4[i].textContent == 'A#') {
 
-           
-            
+
+
             corda4[i].style.display = 'block'
             corda4[i].style.backgroundColor = 'greenyellow'
-            
+
 
 
         }
 
-        if (corda5[i].textContent == 'A#'){
+        if (corda5[i].textContent == 'A#') {
 
-           
+
             corda5[i].style.display = 'block'
             corda5[i].style.backgroundColor = 'greenyellow'
-            
+
 
 
         }
 
-        if (corda6[i].textContent == 'A#'){
+        if (corda6[i].textContent == 'A#') {
 
-           
+
             corda6[i].style.display = 'block'
             corda6[i].style.backgroundColor = 'greenyellow'
 
@@ -2289,7 +2897,7 @@ function mostrarAS() {
 
 
     }
-    
+
 }
 
 
@@ -2297,59 +2905,59 @@ function mostrarAS() {
 
 function mostrarB() {
 
-    for (i = 0; i < 16; i++){
+    for (i = 0; i < 16; i++) {
 
-        if (corda1[i].textContent == 'B'){
+        if (corda1[i].textContent == 'B') {
 
             corda1[i].style.display = 'block'
             corda1[i].style.backgroundColor = 'greenyellow'
-            
+
 
 
         }
-        if (corda2[i].textContent == 'B'){
+        if (corda2[i].textContent == 'B') {
 
-           
+
             corda2[i].style.display = 'block'
             corda2[i].style.backgroundColor = 'greenyellow'
-           
+
 
 
         }
 
-        if (corda3[i].textContent == 'B'){
+        if (corda3[i].textContent == 'B') {
 
-           
+
             corda3[i].style.display = 'block'
             corda3[i].style.backgroundColor = 'greenyellow'
-           
+
 
         }
 
-        if (corda4[i].textContent == 'B'){
+        if (corda4[i].textContent == 'B') {
 
-           
-            
+
+
             corda4[i].style.display = 'block'
             corda4[i].style.backgroundColor = 'greenyellow'
-            
+
 
 
         }
 
-        if (corda5[i].textContent == 'B'){
+        if (corda5[i].textContent == 'B') {
 
-           
+
             corda5[i].style.display = 'block'
             corda5[i].style.backgroundColor = 'greenyellow'
-            
+
 
 
         }
 
-        if (corda6[i].textContent == 'B'){
+        if (corda6[i].textContent == 'B') {
 
-           
+
             corda6[i].style.display = 'block'
             corda6[i].style.backgroundColor = 'greenyellow'
 
@@ -2358,7 +2966,7 @@ function mostrarB() {
 
 
     }
-    
+
 }
 
 function escalaCMaiorF() {
@@ -2371,7 +2979,7 @@ function escalaCMaiorF() {
     mostrarG()
     mostrarA()
     mostrarB()
-    
+
 }
 
 function escalaGMaiorF() {
@@ -2384,7 +2992,7 @@ function escalaGMaiorF() {
     mostrarG()
     mostrarA()
     mostrarB()
-    
+
 }
 
 function escalaDMaiorF() {
@@ -2397,7 +3005,7 @@ function escalaDMaiorF() {
     mostrarG()
     mostrarA()
     mostrarB()
-    
+
 }
 
 function escalaAMaiorF() {
@@ -2410,7 +3018,7 @@ function escalaAMaiorF() {
     mostrarGS()
     mostrarA()
     mostrarB()
-    
+
 }
 
 function escalaEMaiorF() {
@@ -2423,7 +3031,7 @@ function escalaEMaiorF() {
     mostrarGS()
     mostrarA()
     mostrarB()
-    
+
 }
 
 function escalaBMaiorF() {
@@ -2436,7 +3044,7 @@ function escalaBMaiorF() {
     mostrarGS()
     mostrarAS()
     mostrarB()
-    
+
 }
 
 function escalaFMaiorF() {
@@ -2449,7 +3057,7 @@ function escalaFMaiorF() {
     mostrarG()
     mostrarA()
     mostrarBb()
-    
+
 }
 
 function escalaBbMaiorF() {
@@ -2462,7 +3070,7 @@ function escalaBbMaiorF() {
     mostrarG()
     mostrarA()
     mostrarBb()
-    
+
 }
 
 function escalaEbMaiorF() {
@@ -2475,7 +3083,7 @@ function escalaEbMaiorF() {
     mostrarG()
     mostrarAb()
     mostrarBb()
-    
+
 }
 
 function escalaDbMaiorF() {
@@ -2488,7 +3096,7 @@ function escalaDbMaiorF() {
     mostrarGb()
     mostrarAb()
     mostrarBb()
-    
+
 }
 
 function escalaGbMaiorF() {
@@ -2501,7 +3109,7 @@ function escalaGbMaiorF() {
     mostrarGb()
     mostrarAb()
     mostrarBb()
-    
+
 }
 
 function escalaAbMaiorF() {
@@ -2514,26 +3122,56 @@ function escalaAbMaiorF() {
     mostrarG()
     mostrarAb()
     mostrarBb()
-    
+
 }
 
+for (i = 0; i < nota.length; i++) {
 
+    nota[i].style.transition = 'all 1s'
 
-
-
-
-for(i = 0; i < 16; i++){
-
-    corda1[i].style.transition = 'all 1s'
-    corda2[i].style.transition = 'all 1s'
-    corda3[i].style.transition = 'all 1s'
-    corda4[i].style.transition = 'all 1s'
-    corda5[i].style.transition = 'all 1s'
-    corda6[i].style.transition = 'all 1s'
 
 }
 
 
 
 //*********************************************************************************************************/
+
+
+
+
+apagar()
+
+estrutura.style.display = 'none'
+tipo.style.display = 'none'
+tonalidade.style.display = 'none'
+direita.style.display = 'none'
+esquerda.style.display = 'none'
+posicao.style.borderLeftColor = 'orangered'
+
+for (i = 0; i < corda.length; i++) {
+
+    corda[i].style.backgroundColor = 'orangered'
+
+
+}
+
+for (i = 0; i < traste.length; i++) {
+
+    traste[i].style.backgroundColor = 'orangered'
+
+
+}
+
+for (i = 0; i < bolinha.length; i++) {
+
+    bolinha[i].style.backgroundColor = 'orangered'
+
+
+}
+
+body.style.backgroundColor = '#1F3340'
+
+  
+
+
 
