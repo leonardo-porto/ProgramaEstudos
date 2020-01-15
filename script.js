@@ -1,4 +1,4 @@
-
+let speed = document.getElementById('speed')
 let traste1 = document.getElementById('traste1')
 let traste2 = document.getElementById('traste2')
 let traste3 = document.getElementById('traste3')
@@ -62,6 +62,27 @@ let menos = document.getElementById('menos')
 let andamento = document.getElementById('andamento')
 let bpm = 60
 let camada1 = document.getElementById('camada1')
+let tocando = false
+let speedOn = false
+
+speed.onclick = function () {
+
+    if(speedOn == false){
+
+        speedOn = true
+        speed.src = 'speedOn.svg'
+        funcaoVelocidade()
+
+
+    } else {
+
+        speedOn = false
+        speed.src = 'speed.svg'
+        window.location.reload()
+        
+    }
+    
+}
 
 andamento.innerHTML = bpm + ' BPM'
 
@@ -71,19 +92,45 @@ function verificaBpm() {
 
     if(bpm <= 55){
 
-        bpm = 60
-        andamento.innerHTML = '60 BPM'
-        click.src = '60 BPM.mp3'
-        click.play()
+        if(tocando == true){
+
+            bpm = 60
+            andamento.innerHTML = '60 BPM'
+            click.src = '60 BPM.mp3'
+            click.play()
+
+
+        } else if (tocando == false){
+
+            bpm = 60
+            andamento.innerHTML = '60 BPM'
+            click.src = '60 BPM.mp3'
+
+
+        }
+
+       
 
     }
 
     if (bpm >= 285){
 
-        bpm = 280
-        andamento.innerHTML = '280 BPM'
-        click.src = '280 BPM.mp3'
-        click.play()
+        if(tocando == true){
+
+            bpm = 280
+            andamento.innerHTML = '280 BPM'
+            click.src = '280 BPM.mp3'
+            click.play()
+
+
+        } else if (tocando == false){
+
+            bpm = 280
+            andamento.innerHTML = '280 BPM'
+            click.src = '280 BPM.mp3'
+
+
+        }
 
     }
     
@@ -96,6 +143,7 @@ play.onclick = function () {
     pause.style.display = 'block'
     click.currentTime = 10
     camada1.style.animation = 'pisca2 1s linear infinite'
+    tocando = true
     
 
 
@@ -108,6 +156,8 @@ pause.onclick = function () {
     play.style.display = 'block'
     pause.style.display = 'none'
     camada1.style.animation = ''
+    tocando = false
+    clearInterval(treinarVelocidade)
     
 
     
@@ -117,13 +167,29 @@ pause.onclick = function () {
 
 mais.onclick = function () {
 
-    bpm += 5
-    andamento.innerHTML = bpm + ' BPM'
-    click.src = bpm + ' BPM.mp3'
-    click.currentTime = 10
-    click.play()
-    verificaBpm()
-    camada1.style.animation = 'pisca2 1s linear infinite'
+    if(tocando == true){
+
+        bpm += 5
+        andamento.innerHTML = bpm + ' BPM'
+        click.src = bpm + ' BPM.mp3'
+        click.currentTime = 10
+        click.play()
+        verificaBpm()
+        camada1.style.animation = 'pisca2 1s linear infinite'
+
+    } else if (tocando == false){
+
+        bpm += 5
+        andamento.innerHTML = bpm + ' BPM'
+        click.src = bpm + ' BPM.mp3'
+        click.currentTime = 10
+        verificaBpm()
+        camada1.style.animation = ''
+
+
+    }
+
+   
 
 }
 
@@ -131,13 +197,27 @@ menos.onclick = function () {
 
     
 
-    bpm -= 5
-    andamento.innerHTML = bpm + ' BPM'
-    click.src = bpm + ' BPM.mp3'
-    click.currentTime = 10
-    click.play()
-    verificaBpm()
-    camada1.style.animation = 'pisca2 1s linear infinite'
+    if(tocando == true){
+
+        bpm -= 5
+        andamento.innerHTML = bpm + ' BPM'
+        click.src = bpm + ' BPM.mp3'
+        click.currentTime = 10
+        click.play()
+        verificaBpm()
+        camada1.style.animation = 'pisca2 1s linear infinite'
+        
+    } else if (tocando == false){
+
+        bpm -= 5
+        andamento.innerHTML = bpm + ' BPM'
+        click.src = bpm + ' BPM.mp3'
+        click.currentTime = 10
+        verificaBpm()
+        camada1.style.animation = ''
+
+
+    }
 
 }
 
@@ -3171,7 +3251,39 @@ for (i = 0; i < bolinha.length; i++) {
 
 body.style.backgroundColor = '#1F3340'
 
-  
+
+
+    
+let funcaoVelocidade = function treinarVelocidade(batidas = 10, minutos = 1) {
+
+    setInterval(function () {
+        
+        if(tocando == true){
+
+            bpm += batidas
+            andamento.innerHTML = bpm + ' BPM'
+            click.src = bpm + ' BPM.mp3'
+            click.currentTime = 10
+            click.play()
+            verificaBpm()
+            camada1.style.animation = 'pisca2 1s linear infinite'
+    
+        } else if (tocando == false){
+    
+            bpm += batidas
+            andamento.innerHTML = bpm + ' BPM'
+            click.src = bpm + ' BPM.mp3'
+            click.currentTime = 10
+            verificaBpm()
+            camada1.style.animation = ''
+    
+    
+        }
+    
+
+    }, 1000*60*minutos)
+    
+}  
 
 
 
