@@ -1,3 +1,4 @@
+let abrCorda = document.getElementById('abrCorda')
 let speed = document.getElementById('speed')
 let traste1 = document.getElementById('traste1')
 let traste2 = document.getElementById('traste2')
@@ -3875,3 +3876,4 @@ for (i = 0; i < bolinha.length; i++) {
     bolinha[i].style.zIndex = 11
 
 }
+
