@@ -70,6 +70,7 @@
     position: absolute;
     top: 450px;
     left: 700px;
+    cursor: pointer;
 }
 
 
@@ -2628,6 +2629,8 @@ body{
 
     left: 360px;
 }
+
+
 
 #posicao5 {
 

@@ -143,7 +143,7 @@ play.onclick = function () {
     click.play()
     play.style.display = 'none'
     pause.style.display = 'block'
-    click.currentTime = 10
+    click.currentTime = 0
     camada1.style.animation = 'pisca2 1s linear infinite'
     tocando = true
 
@@ -369,7 +369,7 @@ play.onclick = function () {
 pause.onclick = function () {
 
     click.pause()
-    click.currentTime = 10
+    click.currentTime = 0
     play.style.display = 'block'
     pause.style.display = 'none'
     camada1.style.animation = ''
@@ -389,214 +389,214 @@ mais.onclick = function () {
         bpm += 5
         andamento.innerHTML = bpm + ' BPM'
         click.src = bpm + ' BPM.mp3'
-        click.currentTime = 10
+        click.currentTime = 0
         click.play()
         verificaBpm()
-        camada1.style.animation = 'pisca2 1s linear infinite'
+        if (bpm == 120) {
+
+            camada1.style.animation = 'pisca2 0.5s linear infinite'
+
+
+        } else if (bpm == 240) {
+
+            camada1.style.animation = 'pisca2 0.25s linear infinite'
+
+
+        } else if (bpm == 65) {
+
+            camada1.style.animation = 'pisca2 0.92s linear infinite'
+
+
+        } else if (bpm == 70) {
+
+            camada1.style.animation = 'pisca2 0.85s linear infinite'
+
+
+        } else if (bpm == 75) {
+
+            camada1.style.animation = 'pisca2 0.8s linear infinite'
+
+
+        } else if (bpm == 80) {
+
+            camada1.style.animation = 'pisca2 0.75s linear infinite'
+
+
+        } else if (bpm == 85) {
+
+            camada1.style.animation = 'pisca2 0.70s linear infinite'
+
+
+        } else if (bpm == 90) {
+
+            camada1.style.animation = 'pisca2 0.66s linear infinite'
+
+
+        } else if (bpm == 95) {
+
+            camada1.style.animation = 'pisca2 0.63s linear infinite'
+
+
+        } else if (bpm == 100) {
+
+            camada1.style.animation = 'pisca2 0.6s linear infinite'
+
+
+        } else if (bpm == 105) {
+
+            camada1.style.animation = 'pisca2 0.57s linear infinite'
+
+
+        } else if (bpm == 110) {
+
+            camada1.style.animation = 'pisca2 0.54s linear infinite'
+
+
+        } else if (bpm == 115) {
+
+            camada1.style.animation = 'pisca2 0.52s linear infinite'
+
+
+        } else if (bpm == 120) {
+
+            camada1.style.animation = 'pisca2 0.5s linear infinite'
+
+
+        } else if (bpm == 125) {
+
+            camada1.style.animation = 'pisca2 0.48s linear infinite'
+
+
+        } else if (bpm == 130) {
+
+            camada1.style.animation = 'pisca2 0.46s linear infinite'
+
+
+        } else if (bpm == 135) {
+
+            camada1.style.animation = 'pisca2 0.44s linear infinite'
+
+
+        } else if (bpm == 140) {
+
+            camada1.style.animation = 'pisca2 0.42s linear infinite'
+
+
+        } else if (bpm == 145) {
+
+            camada1.style.animation = 'pisca2 0.41s linear infinite'
+
+
+        } else if (bpm == 150) {
+
+            camada1.style.animation = 'pisca2 0.4s linear infinite'
+
+
+        } else if (bpm == 155) {
+
+            camada1.style.animation = 'pisca2 0.38s linear infinite'
+
+
+        } else if (bpm == 160) {
+
+            camada1.style.animation = 'pisca2 0.375s linear infinite'
+
+
+        } else if (bpm == 165) {
+
+            camada1.style.animation = 'pisca2 0.36s linear infinite'
+
+
+        } else if (bpm == 170) {
+
+            camada1.style.animation = 'pisca2 0.35s linear infinite'
+
+
+        } else if (bpm == 175) {
+
+            camada1.style.animation = 'pisca2 0.34s linear infinite'
+
+
+        } else if (bpm == 180) {
+
+            camada1.style.animation = 'pisca2 0.33s linear infinite'
+
+
+        } else if (bpm == 185) {
+
+            camada1.style.animation = 'pisca2 0.32s linear infinite'
+
+
+        } else if (bpm == 190) {
+
+            camada1.style.animation = 'pisca2 0.31s linear infinite'
+
+
+        } else if (bpm == 195) {
+
+            camada1.style.animation = 'pisca2 0.307s linear infinite'
+
+
+        } else if (bpm == 200) {
+
+            camada1.style.animation = 'pisca2 0.3s linear infinite'
+
+
+        } else if (bpm == 205) {
+
+            camada1.style.animation = 'pisca2 0.292s linear infinite'
+
+
+        } else if (bpm == 210) {
+
+            camada1.style.animation = 'pisca2 0.285s linear infinite'
+
+
+        } else if (bpm == 215) {
+
+            camada1.style.animation = 'pisca2 0.279s linear infinite'
+
+
+        } else if (bpm == 220) {
+
+            camada1.style.animation = 'pisca2 0.272s linear infinite'
+
+
+        } else if (bpm == 225) {
+
+            camada1.style.animation = 'pisca2 0.266s linear infinite'
+
+
+        } else if (bpm == 230) {
+
+            camada1.style.animation = 'pisca2 0.260s linear infinite'
+
+
+        } else if (bpm == 235) {
+
+            camada1.style.animation = 'pisca2 0.255s linear infinite'
+
+
+        } else if (bpm == 240) {
+
+            camada1.style.animation = 'pisca2 0.25s linear infinite'
+
+
+        }
 
     } else if (tocando == false) {
 
         bpm += 5
         andamento.innerHTML = bpm + ' BPM'
         click.src = bpm + ' BPM.mp3'
-        click.currentTime = 10
+        click.currentTime = 0
         verificaBpm()
         camada1.style.animation = ''
 
 
     }
 
-    if (bpm == 120) {
 
-        camada1.style.animation = 'pisca2 0.5s linear infinite'
-
-
-    } else if (bpm == 240) {
-
-        camada1.style.animation = 'pisca2 0.25s linear infinite'
-
-
-    } else if (bpm == 65) {
-
-        camada1.style.animation = 'pisca2 0.92s linear infinite'
-
-
-    } else if (bpm == 70) {
-
-        camada1.style.animation = 'pisca2 0.85s linear infinite'
-
-
-    } else if (bpm == 75) {
-
-        camada1.style.animation = 'pisca2 0.8s linear infinite'
-
-
-    } else if (bpm == 80) {
-
-        camada1.style.animation = 'pisca2 0.75s linear infinite'
-
-
-    } else if (bpm == 85) {
-
-        camada1.style.animation = 'pisca2 0.70s linear infinite'
-
-
-    } else if (bpm == 90) {
-
-        camada1.style.animation = 'pisca2 0.66s linear infinite'
-
-
-    } else if (bpm == 95) {
-
-        camada1.style.animation = 'pisca2 0.63s linear infinite'
-
-
-    } else if (bpm == 100) {
-
-        camada1.style.animation = 'pisca2 0.6s linear infinite'
-
-
-    } else if (bpm == 105) {
-
-        camada1.style.animation = 'pisca2 0.57s linear infinite'
-
-
-    } else if (bpm == 110) {
-
-        camada1.style.animation = 'pisca2 0.54s linear infinite'
-
-
-    } else if (bpm == 115) {
-
-        camada1.style.animation = 'pisca2 0.52s linear infinite'
-
-
-    } else if (bpm == 120) {
-
-        camada1.style.animation = 'pisca2 0.5s linear infinite'
-
-
-    } else if (bpm == 125) {
-
-        camada1.style.animation = 'pisca2 0.48s linear infinite'
-
-
-    } else if (bpm == 130) {
-
-        camada1.style.animation = 'pisca2 0.46s linear infinite'
-
-
-    } else if (bpm == 135) {
-
-        camada1.style.animation = 'pisca2 0.44s linear infinite'
-
-
-    } else if (bpm == 140) {
-
-        camada1.style.animation = 'pisca2 0.42s linear infinite'
-
-
-    } else if (bpm == 145) {
-
-        camada1.style.animation = 'pisca2 0.41s linear infinite'
-
-
-    } else if (bpm == 150) {
-
-        camada1.style.animation = 'pisca2 0.4s linear infinite'
-
-
-    } else if (bpm == 155) {
-
-        camada1.style.animation = 'pisca2 0.38s linear infinite'
-
-
-    } else if (bpm == 160) {
-
-        camada1.style.animation = 'pisca2 0.375s linear infinite'
-
-
-    } else if (bpm == 165) {
-
-        camada1.style.animation = 'pisca2 0.36s linear infinite'
-
-
-    } else if (bpm == 170) {
-
-        camada1.style.animation = 'pisca2 0.35s linear infinite'
-
-
-    } else if (bpm == 175) {
-
-        camada1.style.animation = 'pisca2 0.34s linear infinite'
-
-
-    } else if (bpm == 180) {
-
-        camada1.style.animation = 'pisca2 0.33s linear infinite'
-
-
-    } else if (bpm == 185) {
-
-        camada1.style.animation = 'pisca2 0.32s linear infinite'
-
-
-    } else if (bpm == 190) {
-
-        camada1.style.animation = 'pisca2 0.31s linear infinite'
-
-
-    } else if (bpm == 195) {
-
-        camada1.style.animation = 'pisca2 0.307s linear infinite'
-
-
-    } else if (bpm == 200) {
-
-        camada1.style.animation = 'pisca2 0.3s linear infinite'
-
-
-    } else if (bpm == 205) {
-
-        camada1.style.animation = 'pisca2 0.292s linear infinite'
-
-
-    } else if (bpm == 210) {
-
-        camada1.style.animation = 'pisca2 0.285s linear infinite'
-
-
-    } else if (bpm == 215) {
-
-        camada1.style.animation = 'pisca2 0.279s linear infinite'
-
-
-    } else if (bpm == 220) {
-
-        camada1.style.animation = 'pisca2 0.272s linear infinite'
-
-
-    } else if (bpm == 225) {
-
-        camada1.style.animation = 'pisca2 0.266s linear infinite'
-
-
-    } else if (bpm == 230) {
-
-        camada1.style.animation = 'pisca2 0.260s linear infinite'
-
-
-    } else if (bpm == 235) {
-
-        camada1.style.animation = 'pisca2 0.255s linear infinite'
-
-
-    } else if (bpm == 240) {
-
-        camada1.style.animation = 'pisca2 0.25s linear infinite'
-
-
-    }
 
 
 
@@ -611,211 +611,209 @@ menos.onclick = function () {
         bpm -= 5
         andamento.innerHTML = bpm + ' BPM'
         click.src = bpm + ' BPM.mp3'
-        click.currentTime = 10
+        click.currentTime = 0
         click.play()
         verificaBpm()
-        camada1.style.animation = 'pisca2 1s linear infinite'
+        if (bpm == 120) {
+
+            camada1.style.animation = 'pisca2 0.5s linear infinite'
+
+
+        } else if (bpm == 240) {
+
+            camada1.style.animation = 'pisca2 0.25s linear infinite'
+
+
+        } else if (bpm == 65) {
+
+            camada1.style.animation = 'pisca2 0.92s linear infinite'
+
+
+        } else if (bpm == 70) {
+
+            camada1.style.animation = 'pisca2 0.85s linear infinite'
+
+
+        } else if (bpm == 75) {
+
+            camada1.style.animation = 'pisca2 0.8s linear infinite'
+
+
+        } else if (bpm == 80) {
+
+            camada1.style.animation = 'pisca2 0.75s linear infinite'
+
+
+        } else if (bpm == 85) {
+
+            camada1.style.animation = 'pisca2 0.70s linear infinite'
+
+
+        } else if (bpm == 90) {
+
+            camada1.style.animation = 'pisca2 0.66s linear infinite'
+
+
+        } else if (bpm == 95) {
+
+            camada1.style.animation = 'pisca2 0.63s linear infinite'
+
+
+        } else if (bpm == 100) {
+
+            camada1.style.animation = 'pisca2 0.6s linear infinite'
+
+
+        } else if (bpm == 105) {
+
+            camada1.style.animation = 'pisca2 0.57s linear infinite'
+
+
+        } else if (bpm == 110) {
+
+            camada1.style.animation = 'pisca2 0.54s linear infinite'
+
+
+        } else if (bpm == 115) {
+
+            camada1.style.animation = 'pisca2 0.52s linear infinite'
+
+
+        } else if (bpm == 120) {
+
+            camada1.style.animation = 'pisca2 0.5s linear infinite'
+
+
+        } else if (bpm == 125) {
+
+            camada1.style.animation = 'pisca2 0.48s linear infinite'
+
+
+        } else if (bpm == 130) {
+
+            camada1.style.animation = 'pisca2 0.46s linear infinite'
+
+
+        } else if (bpm == 135) {
+
+            camada1.style.animation = 'pisca2 0.44s linear infinite'
+
+
+        } else if (bpm == 140) {
+
+            camada1.style.animation = 'pisca2 0.42s linear infinite'
+
+
+        } else if (bpm == 145) {
+
+            camada1.style.animation = 'pisca2 0.41s linear infinite'
+
+
+        } else if (bpm == 150) {
+
+            camada1.style.animation = 'pisca2 0.4s linear infinite'
+
+
+        } else if (bpm == 155) {
+
+            camada1.style.animation = 'pisca2 0.38s linear infinite'
+
+
+        } else if (bpm == 160) {
+
+            camada1.style.animation = 'pisca2 0.375s linear infinite'
+
+
+        } else if (bpm == 165) {
+
+            camada1.style.animation = 'pisca2 0.36s linear infinite'
+
+
+        } else if (bpm == 170) {
+
+            camada1.style.animation = 'pisca2 0.35s linear infinite'
+
+
+        } else if (bpm == 175) {
+
+            camada1.style.animation = 'pisca2 0.34s linear infinite'
+
+
+        } else if (bpm == 180) {
+
+            camada1.style.animation = 'pisca2 0.33s linear infinite'
+
+
+        } else if (bpm == 185) {
+
+            camada1.style.animation = 'pisca2 0.32s linear infinite'
+
+
+        } else if (bpm == 190) {
+
+            camada1.style.animation = 'pisca2 0.31s linear infinite'
+
+
+        } else if (bpm == 195) {
+
+            camada1.style.animation = 'pisca2 0.307s linear infinite'
+
+
+        } else if (bpm == 200) {
+
+            camada1.style.animation = 'pisca2 0.3s linear infinite'
+
+
+        } else if (bpm == 205) {
+
+            camada1.style.animation = 'pisca2 0.292s linear infinite'
+
+
+        } else if (bpm == 210) {
+
+            camada1.style.animation = 'pisca2 0.285s linear infinite'
+
+
+        } else if (bpm == 215) {
+
+            camada1.style.animation = 'pisca2 0.279s linear infinite'
+
+
+        } else if (bpm == 220) {
+
+            camada1.style.animation = 'pisca2 0.272s linear infinite'
+
+
+        } else if (bpm == 225) {
+
+            camada1.style.animation = 'pisca2 0.266s linear infinite'
+
+
+        } else if (bpm == 230) {
+
+            camada1.style.animation = 'pisca2 0.260s linear infinite'
+
+
+        } else if (bpm == 235) {
+
+            camada1.style.animation = 'pisca2 0.255s linear infinite'
+
+
+        } else if (bpm == 240) {
+
+            camada1.style.animation = 'pisca2 0.25s linear infinite'
+
+
+        }
 
     } else if (tocando == false) {
 
         bpm -= 5
         andamento.innerHTML = bpm + ' BPM'
         click.src = bpm + ' BPM.mp3'
-        click.currentTime = 10
+        click.currentTime = 0
         verificaBpm()
         camada1.style.animation = ''
-
-
-    }
-
-    if (bpm == 120) {
-
-        camada1.style.animation = 'pisca2 0.5s linear infinite'
-
-
-    } else if (bpm == 240) {
-
-        camada1.style.animation = 'pisca2 0.25s linear infinite'
-
-
-    } else if (bpm == 65) {
-
-        camada1.style.animation = 'pisca2 0.92s linear infinite'
-
-
-    } else if (bpm == 70) {
-
-        camada1.style.animation = 'pisca2 0.85s linear infinite'
-
-
-    } else if (bpm == 75) {
-
-        camada1.style.animation = 'pisca2 0.8s linear infinite'
-
-
-    } else if (bpm == 80) {
-
-        camada1.style.animation = 'pisca2 0.75s linear infinite'
-
-
-    } else if (bpm == 85) {
-
-        camada1.style.animation = 'pisca2 0.70s linear infinite'
-
-
-    } else if (bpm == 90) {
-
-        camada1.style.animation = 'pisca2 0.66s linear infinite'
-
-
-    } else if (bpm == 95) {
-
-        camada1.style.animation = 'pisca2 0.63s linear infinite'
-
-
-    } else if (bpm == 100) {
-
-        camada1.style.animation = 'pisca2 0.6s linear infinite'
-
-
-    } else if (bpm == 105) {
-
-        camada1.style.animation = 'pisca2 0.57s linear infinite'
-
-
-    } else if (bpm == 110) {
-
-        camada1.style.animation = 'pisca2 0.54s linear infinite'
-
-
-    } else if (bpm == 115) {
-
-        camada1.style.animation = 'pisca2 0.52s linear infinite'
-
-
-    } else if (bpm == 120) {
-
-        camada1.style.animation = 'pisca2 0.5s linear infinite'
-
-
-    } else if (bpm == 125) {
-
-        camada1.style.animation = 'pisca2 0.48s linear infinite'
-
-
-    } else if (bpm == 130) {
-
-        camada1.style.animation = 'pisca2 0.46s linear infinite'
-
-
-    } else if (bpm == 135) {
-
-        camada1.style.animation = 'pisca2 0.44s linear infinite'
-
-
-    } else if (bpm == 140) {
-
-        camada1.style.animation = 'pisca2 0.42s linear infinite'
-
-
-    } else if (bpm == 145) {
-
-        camada1.style.animation = 'pisca2 0.41s linear infinite'
-
-
-    } else if (bpm == 150) {
-
-        camada1.style.animation = 'pisca2 0.4s linear infinite'
-
-
-    } else if (bpm == 155) {
-
-        camada1.style.animation = 'pisca2 0.38s linear infinite'
-
-
-    } else if (bpm == 160) {
-
-        camada1.style.animation = 'pisca2 0.375s linear infinite'
-
-
-    } else if (bpm == 165) {
-
-        camada1.style.animation = 'pisca2 0.36s linear infinite'
-
-
-    } else if (bpm == 170) {
-
-        camada1.style.animation = 'pisca2 0.35s linear infinite'
-
-
-    } else if (bpm == 175) {
-
-        camada1.style.animation = 'pisca2 0.34s linear infinite'
-
-
-    } else if (bpm == 180) {
-
-        camada1.style.animation = 'pisca2 0.33s linear infinite'
-
-
-    } else if (bpm == 185) {
-
-        camada1.style.animation = 'pisca2 0.32s linear infinite'
-
-
-    } else if (bpm == 190) {
-
-        camada1.style.animation = 'pisca2 0.31s linear infinite'
-
-
-    } else if (bpm == 195) {
-
-        camada1.style.animation = 'pisca2 0.307s linear infinite'
-
-
-    } else if (bpm == 200) {
-
-        camada1.style.animation = 'pisca2 0.3s linear infinite'
-
-
-    } else if (bpm == 205) {
-
-        camada1.style.animation = 'pisca2 0.292s linear infinite'
-
-
-    } else if (bpm == 210) {
-
-        camada1.style.animation = 'pisca2 0.285s linear infinite'
-
-
-    } else if (bpm == 215) {
-
-        camada1.style.animation = 'pisca2 0.279s linear infinite'
-
-
-    } else if (bpm == 220) {
-
-        camada1.style.animation = 'pisca2 0.272s linear infinite'
-
-
-    } else if (bpm == 225) {
-
-        camada1.style.animation = 'pisca2 0.266s linear infinite'
-
-
-    } else if (bpm == 230) {
-
-        camada1.style.animation = 'pisca2 0.260s linear infinite'
-
-
-    } else if (bpm == 235) {
-
-        camada1.style.animation = 'pisca2 0.255s linear infinite'
-
-
-    } else if (bpm == 240) {
-
-        camada1.style.animation = 'pisca2 0.25s linear infinite'
 
 
     }
