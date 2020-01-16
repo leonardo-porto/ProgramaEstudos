@@ -38,7 +38,7 @@ let ex2 = document.getElementById('ex2')
 let ex3 = document.getElementById('ex3')
 let ex4 = document.getElementById('ex4')
 let ex5 = document.getElementById('ex5')
-let moldura = document.getElementById('moldura')
+
 let posicao1 = document.getElementById('posicao1')
 let posicao2 = document.getElementById('posicao2')
 let posicao3 = document.getElementById('posicao3')
@@ -618,47 +618,6 @@ for (i = 0; i < bolinha.length; i++) {
 
 console.log(all.length)
 
-posicao1.onclick = function () {
-
-    molduraF(8)
-    moldura.style.animation = 'cresce 1s linear'
-
-
-
-}
-
-posicao2.onclick = function () {
-
-    molduraF(10)
-    moldura.style.animation = 'cresce 1s linear'
-
-
-
-}
-
-posicao3.onclick = function () {
-
-    molduraF(0)
-    moldura.style.animation = 'cresce 1s linear'
-
-
-}
-
-posicao4.onclick = function () {
-
-    molduraF(3)
-    moldura.style.animation = 'cresce 1s linear'
-
-
-}
-
-posicao5.onclick = function () {
-
-    molduraF(5)
-    moldura.style.animation = 'cresce 1s linear'
-
-
-}
 
 
 
@@ -719,7 +678,7 @@ ex1.onclick = function () {
 
     lista.style.right = '-550px'
 
-    molduraF(5)
+    
 
     for (i = 5; i < 9; i++) {
 
@@ -3287,3 +3246,33 @@ let funcaoVelocidade = function treinarVelocidade(batidas = 10, minutos = 1) {
 
 
 
+for(i = 0; i < corda.length; i++){
+
+    corda[i].style.position = 'fixed'
+    corda[i].style.zIndex = 11
+
+
+}
+
+for(i = 0; i < traste.length; i++){
+
+    traste[i].style.position = 'fixed'
+    traste[i].style.zIndex = 11
+
+
+}
+
+for(i = 0; i < nota.length; i++){
+
+    nota[i].style.position = 'fixed'
+    nota[i].style.zIndex = 11
+
+
+}
+
+for(i = 0; i < bolinha.length; i++){
+
+    bolinha[i].style.position = 'fixed'
+    bolinha[i].style.zIndex = 11
+
+}
