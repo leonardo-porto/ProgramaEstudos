@@ -3764,12 +3764,7 @@ function escalaAbMaiorF() {
 
 }
 
-for (i = 0; i < nota.length; i++) {
 
-    nota[i].style.transition = 'all 1s'
-
-
-}
 
 
 
@@ -4040,6 +4035,7 @@ for (i = 0; i < corda.length; i++) {
 
     corda[i].style.position = 'fixed'
     corda[i].style.zIndex = 11
+    corda[i].style.transition = 'all 2s'
 
 
 }
@@ -4048,6 +4044,7 @@ for (i = 0; i < traste.length; i++) {
 
     traste[i].style.position = 'fixed'
     traste[i].style.zIndex = 11
+    traste[i].style.transition = 'all 2s'
 
 
 }
@@ -4056,7 +4053,7 @@ for (i = 0; i < nota.length; i++) {
 
     nota[i].style.position = 'fixed'
     nota[i].style.zIndex = 13
-
+    nota[i].style.transition = 'all 2s'
 
 }
 
@@ -4064,6 +4061,12 @@ for (i = 0; i < bolinha.length; i++) {
 
     bolinha[i].style.position = 'fixed'
     bolinha[i].style.zIndex = 11
+    bolinha[i].style.transition = 'all 2s'
 
 }
 
+for (i = 0; i < bolinha.length; i++){
+    
+    bolinha[i].style.backgroundColor = 'gray'
+
+}
