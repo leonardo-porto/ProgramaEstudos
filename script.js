@@ -1017,6 +1017,7 @@ ex5.onclick = function () {
 menuH1.onclick = function () {
 
     lista.style.right = '10px'
+    lista.style.top = '0px'
 
     for (i = 0; i < corda.length; i++) {
 
@@ -1334,7 +1335,7 @@ ex2.onclick = function () {
 
 lista.onmouseleave = function () {
 
-    lista.style.right = '-550px'
+    lista.style.top = '-580px'
     for (i = 0; i < corda.length; i++) {
 
         corda[i].style.filter = 'blur(0px)'
@@ -4070,3 +4071,96 @@ for (i = 0; i < bolinha.length; i++){
     bolinha[i].style.backgroundColor = 'gray'
 
 }
+
+/*
+
+let audio2 = document.getElementById('audio2')
+
+setInterval(function () {
+
+    
+    if(audio2.currentTime >= 4){
+
+        apagar()
+
+        corda5[5].style.display = 'block'
+        corda4[6].style.display = 'block'
+        corda3[5].style.display = 'block'
+        corda2[6].style.display = 'block'
+
+        console.log('teste')
+
+
+    }
+
+    if(audio2.currentTime >= 6){
+
+        apagar()
+
+        corda6[3].style.display = 'block'
+        corda4[3].style.display = 'block'
+        corda3[4].style.display = 'block'
+        corda2[4].style.display = 'block'
+
+
+
+    }
+
+    if(audio2.currentTime >= 8){
+
+        apagar()
+
+        corda5[3].style.display = 'block'
+        corda4[5].style.display = 'block'
+        corda3[3].style.display = 'block'
+        corda2[4].style.display = 'block'
+
+        console.log('teste')
+
+
+    }
+
+    if(audio2.currentTime >= 12){
+
+        apagar()
+
+        corda5[5].style.display = 'block'
+        corda4[6].style.display = 'block'
+        corda3[5].style.display = 'block'
+        corda2[6].style.display = 'block'
+
+        console.log('teste')
+
+
+    }
+
+    if(audio2.currentTime >= 14){
+
+        apagar()
+
+        corda6[3].style.display = 'block'
+        corda4[3].style.display = 'block'
+        corda3[4].style.display = 'block'
+        corda2[4].style.display = 'block'
+
+
+
+    }
+
+    if(audio2.currentTime >= 16){
+
+        apagar()
+
+        corda5[3].style.display = 'block'
+        corda4[5].style.display = 'block'
+        corda3[3].style.display = 'block'
+        corda2[4].style.display = 'block'
+
+        console.log('teste')
+
+
+    }
+
+    
+}, 500)
+*/
