@@ -72,8 +72,7 @@ let css = document.getElementById('css')
 semana1.onclick = function () {
 
     listaSemanas.style.top = '-580px'
-    css.href = 'Semana1/semana1.css'
-    window.location = 'Semana1/semana1.html'
+    
     
 }
 
