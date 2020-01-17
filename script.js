@@ -1,3 +1,4 @@
+let calendario = document.getElementById('calendario')
 let abrCorda = document.getElementById('abrCorda')
 let speed = document.getElementById('speed')
 let traste1 = document.getElementById('traste1')
@@ -39,7 +40,6 @@ let ex2 = document.getElementById('ex2')
 let ex3 = document.getElementById('ex3')
 let ex4 = document.getElementById('ex4')
 let ex5 = document.getElementById('ex5')
-
 let posicao1 = document.getElementById('posicao1')
 let posicao2 = document.getElementById('posicao2')
 let posicao3 = document.getElementById('posicao3')
@@ -65,6 +65,28 @@ let bpm = 60
 let camada1 = document.getElementById('camada1')
 let tocando = false
 let speedOn = false
+let listaSemanas = document.getElementById('listaSemanas')
+let semana1 = document.getElementById('semana1')
+let css = document.getElementById('css')
+
+semana1.onclick = function () {
+
+    listaSemanas.style.top = '-580px'
+    css.href = 'Semana1/semana1.css'
+    window.location = 'Semana1/semana1.html'
+    
+}
+
+calendario.onclick = function () {
+    
+    listaSemanas.style.top = '10px'
+}
+
+listaSemanas.onmouseleave = function () {
+
+    listaSemanas.style.top = '-580px'
+    
+}
 
 speed.onclick = function () {
 
