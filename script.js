@@ -846,7 +846,7 @@ menos.onclick = function () {
 ex5.onclick = function () {
 
     console.log('ex5')
-    lista.style.right = '-550px'
+    lista.style.top = '-580px'
     base.style.display = 'block'
     base.play()
 
@@ -1226,7 +1226,7 @@ timerSvg.onclick = function () {
 
 ex1.onclick = function () {
 
-    lista.style.right = '-550px'
+    lista.style.top = '-580px'
 
     ex1.style.backgroundColor = 'orange'
 }
@@ -1298,7 +1298,7 @@ ex1.onclick = function () {
 
     apagar()
 
-    lista.style.right = '-550px'
+    lista.style.top = '-580px'
 
 
 
@@ -1334,7 +1334,7 @@ ex2.onclick = function () {
     apagar()
 
     contadorPosicao = 0
-    lista.style.right = '-550px'
+    lista.style.top = '-580px'
 
     video.style.display = 'block'
 
@@ -1393,7 +1393,7 @@ lista.onmouseleave = function () {
 ex3.onclick = function () {
 
     pdf.src = '3em3.pdf'
-    lista.style.right = '-550px'
+    lista.style.top = '-580px'
     video.style.display = 'block'
     video.src = 'https://www.youtube.com/embed/OyV6Y5StgZw?list=PLKJpTqKLvfLKCmmRzBkyWvEyILKXtMkR2'
 
@@ -1409,7 +1409,7 @@ ex3.onclick = function () {
 ex4.onclick = function () {
 
     pdf.src = '4em4.pdf'
-    lista.style.right = '-550px'
+    lista.style.top = '-580px'
     video.style.display = 'block'
     video.src = 'https://www.youtube.com/embed/rEUQSj7mcR8?list=PLKJpTqKLvfLKCmmRzBkyWvEyILKXtMkR2'
 
